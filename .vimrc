@@ -17,6 +17,7 @@ filetype plugin indent on    " required
 
 "Using system keyboard requires vim-gtk
 set clipboard=unnamed
+set mouse=a
 
 "Familiar ctrl shortcuts
 map <C-S> <esc>:w<CR>
@@ -34,6 +35,7 @@ set tabstop=4
 set expandtab
 set softtabstop=4
 set number
+set backspace=indent,eol,start
 
 "Comments/alignment (for nerdcommenter)
 let g:NERDDefaultAlign = 'left'
