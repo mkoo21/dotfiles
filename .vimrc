@@ -10,13 +10,14 @@ Plug 'scrooloose/nerdtree'
 Plug 'joshdick/onedark.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'jiangmiao/auto-pairs'
+Plug 'ervandew/supertab'
 
 call plug#end()
 
 filetype plugin indent on    " required
 
 "Using system keyboard requires vim-gtk
-set clipboard=unnamed
+"set clipboard=unnamed
 set mouse=a
 
 "Familiar ctrl shortcuts
@@ -83,3 +84,9 @@ endif
 let g:onedark_termcolors=256
 colorscheme onedark
 set background=dark
+
+
+if $VIM_CRONTAB == "true"
+    set nobackup
+    set nowritebackup
+endif
