@@ -31,6 +31,7 @@ nnoremap <space> za
 
 "Alignment/tabs/line numbers
 set shiftwidth=4
+set autoindent
 set cindent
 set tabstop=4
 set expandtab
