@@ -23,6 +23,7 @@ set mouse=a
 "Familiar ctrl shortcuts
 map <C-S> <esc>:w<CR>
 map <C-f> <esc>:Files<CR>
+map <C-F> <esc>:Ag<CR>
 
 "Enable code fold with spacebar
 set foldmethod=indent
