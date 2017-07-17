@@ -1,9 +1,8 @@
-set encoding=utf-8
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
 call plug#begin('~/.vim/plugged')
-
+ 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree'
@@ -11,21 +10,24 @@ Plug 'joshdick/onedark.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'jiangmiao/auto-pairs'
 Plug 'ervandew/supertab'
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
 
 call plug#end()
 
 filetype plugin indent on    " required
 
-"Using system keyboard requires vim-gtk
-"set clipboard=unnamed
+"Using system clip requires vim-gtk
+set clipboard=unnamed
 set mouse=a
 
 "Familiar ctrl shortcuts
-map <C-S> <esc>:w<CR>
-map <C-f> <esc>:Files<CR>
-map <C-F> <esc>:Ag<CR>
+map <C-s> <esc>:w<CR>
+noremap <C-f> <esc>:Files<CR>
+noremap ƒ :Ag<CR>
+map <C-l> <esc>:ls<CR>
 
-"Enable code fold with spacebar
+"Code fold with spacebar
 set foldmethod=indent
 set foldlevel=99
 nnoremap <space> za
