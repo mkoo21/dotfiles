@@ -12,6 +12,7 @@ Plug 'Raimondi/delimitMate'
 Plug 'ervandew/supertab'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
+Plug 'vim-syntastic/syntastic'
 
 call plug#end()
 
