@@ -18,6 +18,11 @@ filetype plugin indent on    " required
 "Using system keyboard requires vim-gtk
 set clipboard=unnamed
 
+"Tab/shift tab indent
+nnoremap <Tab> >>
+nnoremap <S-Tab> <<
+inoremap <S-Tab> <C-d>
+
 "Familiar ctrl shortcuts
 map <C-S> <esc>:w<CR>
 map <C-f> <esc>:Files<CR>
