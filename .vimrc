@@ -22,6 +22,11 @@ filetype plugin indent on    " required
 set clipboard=unnamed
 set mouse=a
 
+"Tab/shift tab indent
+nnoremap <Tab> >>
+nnoremap <S-Tab> <<
+inoremap <S-Tab> <C-d>
+
 "Familiar ctrl shortcuts
 map <C-s> <esc>:w<CR>
 noremap <C-f> <esc>:Files<CR>
