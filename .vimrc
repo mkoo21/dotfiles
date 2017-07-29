@@ -85,6 +85,9 @@ if (empty($TMUX))
     endif
 endif
 
+"Salesforce lightning 
+au BufRead *.cmp set syntax=xml
+
 "Mac
 let g:onedark_termcolors=256
 colorscheme onedark
