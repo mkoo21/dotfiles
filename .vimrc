@@ -1,22 +1,26 @@
-set encoding=utf-8
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
 call plug#begin('~/.vim/plugged')
-
+ 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'joshdick/onedark.vim'
 Plug 'scrooloose/nerdcommenter'
-Plug 'jiangmiao/auto-pairs'
+Plug 'Raimondi/delimitMate'
+Plug 'ervandew/supertab'
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
+Plug 'vim-syntastic/syntastic'
 
 call plug#end()
 
 filetype plugin indent on    " required
 
-"Using system keyboard requires vim-gtk
+"Using system clip requires vim-gtk
 set clipboard=unnamed
+set mouse=a
 
 "Tab/shift tab indent
 nnoremap <Tab> >>
@@ -24,21 +28,25 @@ nnoremap <S-Tab> <<
 inoremap <S-Tab> <C-d>
 
 "Familiar ctrl shortcuts
-map <C-S> <esc>:w<CR>
-map <C-f> <esc>:Files<CR>
+map <C-s> <esc>:w<CR>
+noremap <C-f> <esc>:Files<CR>
+noremap ƒ :Ag<CR>
+map <C-l> <esc>:ls<CR>
 
-"Enable code fold with spacebar
+"Code fold with spacebar
 set foldmethod=indent
 set foldlevel=99
 nnoremap <space> za
 
 "Alignment/tabs/line numbers
 set shiftwidth=4
+set autoindent
 set cindent
 set tabstop=4
 set expandtab
 set softtabstop=4
 set number
+set backspace=indent,eol,start
 
 "Comments/alignment (for nerdcommenter)
 let g:NERDDefaultAlign = 'left'
@@ -86,3 +94,9 @@ endif
 let g:onedark_termcolors=256
 colorscheme onedark
 set background=dark
+
+
+if $VIM_CRONTAB == "true"
+    set nobackup
+    set nowritebackup
+endif
