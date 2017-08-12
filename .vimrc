@@ -61,7 +61,8 @@ set hlsearch
 set ignorecase
 
 "NERDTree ezaccess
-noremap <C-\> :NERDTreeToggle<CR>
+noremap <C-\> <ESC>:NERDTreeToggle<CR>
+inoremap <C-\> <ESC>:NERDTreeToggle<CR>
 
 "Python 
 au FileType python
@@ -94,9 +95,12 @@ endif
 au BufRead *.cmp set syntax=xml
 
 "Mac
-let g:onedark_termcolors=256
+"let g:onedark_termcolors=256
 colorscheme onedark
 set background=dark
+
+"Linux translucency
+hi Normal ctermbg=none
 
 
 if $VIM_CRONTAB == "true"
