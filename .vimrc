@@ -5,6 +5,7 @@ call plug#begin('~/.vim/plugged')
  
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'junegunn/goyo.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'joshdick/onedark.vim'
 Plug 'scrooloose/nerdcommenter'
@@ -92,6 +93,10 @@ endif
 
 "Salesforce lightning 
 au BufRead *.cmp set syntax=xml
+
+"Markdown
+au! BufRead,BufNewFile *.md set filetype=mkd
+au! BufRead,BufNewFile *.markdown set filetype=mkd
 
 "Mac
 let g:onedark_termcolors=256
