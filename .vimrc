@@ -62,7 +62,8 @@ set hlsearch
 set ignorecase
 
 "NERDTree ezaccess
-noremap <C-\> :NERDTreeToggle<CR>
+noremap <C-\> <ESC>:NERDTreeToggle<CR>
+inoremap <C-\> <ESC>:NERDTreeToggle<CR>
 
 "Python 
 au FileType python
@@ -99,9 +100,12 @@ au! BufRead,BufNewFile *.md set filetype=mkd
 au! BufRead,BufNewFile *.markdown set filetype=mkd
 
 "Mac
-let g:onedark_termcolors=256
+"let g:onedark_termcolors=256
 colorscheme onedark
 set background=dark
+
+"Linux translucency
+hi Normal ctermbg=none
 
 
 if $VIM_CRONTAB == "true"
