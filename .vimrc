@@ -14,6 +14,7 @@ Plug 'ervandew/supertab'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'vim-syntastic/syntastic'
+Plug 'JamshedVesuna/vim-markdown-preview'
 
 call plug#end()
 
