@@ -3,7 +3,9 @@ filetype off                  " required
 
 call plug#begin('~/.vim/plugged')
  
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+"FZF, vim markdown, pandoc have requirements
+"Colorschemes may need TERM=xterm-256color
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } 
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'scrooloose/nerdtree'
@@ -14,7 +16,7 @@ Plug 'ervandew/supertab'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'vim-syntastic/syntastic'
-Plug 'JamshedVesuna/vim-markdown-preview'
+"Plug 'JamshedVesuna/vim-markdown-preview'
 
 call plug#end()
 
@@ -32,7 +34,7 @@ inoremap <S-Tab> <C-d>
 "Familiar ctrl shortcuts
 map <C-s> <esc>:w<CR>
 noremap <C-f> <esc>:Files<CR>
-noremap ƒ :Ag<CR>
+noremap ƒ :Ag<CR> 
 map <C-l> <esc>:ls<CR>
 
 "Code fold with spacebar
@@ -99,6 +101,9 @@ au BufRead *.cmp set syntax=xml
 "Markdown
 au! BufRead,BufNewFile *.md set filetype=mkd
 au! BufRead,BufNewFile *.markdown set filetype=mkd
+
+autocmd FileType mkd nnoremap <C-p> :w<Space><Bar><Space>!markdown<Space>%<Space>><Space>file.html<Space>&&<Space>open<Space>file.html<CR>
+autocmd FileType mkd inoremap <C-p> <ESC>:w<Space><Bar><Space>!markdown<Space>%<Space>><Space>file.html<Space>&&<Space>open<Space>file.html<CR>
 
 "Mac
 "let g:onedark_termcolors=256
