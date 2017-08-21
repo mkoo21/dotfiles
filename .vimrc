@@ -25,6 +25,8 @@ set mouse=a
 "Tab/shift tab indent
 nnoremap <Tab> >>
 nnoremap <S-Tab> <<
+vnoremap <Tab> >>
+vnoremap <S-Tab> <<
 inoremap <S-Tab> <C-d>
 
 "Familiar ctrl shortcuts
