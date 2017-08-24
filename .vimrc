@@ -27,8 +27,10 @@ set clipboard=unnamed
 set mouse=a
 
 "Tab/shift tab indent
-nnoremap <Tab> >>
-nnoremap <S-Tab> <<
+nnoremap <Tab> >><ESC>
+nnoremap <S-Tab> <<<ESC>
+vnoremap <Tab> >><ESC>
+vnoremap <S-Tab> <<<ESC>
 inoremap <S-Tab> <C-d>
 
 "Familiar ctrl shortcuts
