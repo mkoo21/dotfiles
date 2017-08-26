@@ -12,6 +12,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'joshdick/onedark.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'Raimondi/delimitMate'
+"Note to self this is for autocompletion, not indenting; use :set paste for copypasta
 Plug 'ervandew/supertab'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
@@ -27,14 +28,15 @@ set clipboard=unnamed
 set mouse=a
 
 "Tab/shift tab indent
-nnoremap <Tab> >><ESC>
-nnoremap <S-Tab> <<<ESC>
-vnoremap <Tab> >><ESC>
-vnoremap <S-Tab> <<<ESC>
+nnoremap <Tab> ><ESC>gv
+nnoremap <S-Tab> <<<ESC>gv
+vnoremap <Tab> >gv
+vnoremap <S-Tab> <gv
 inoremap <S-Tab> <C-d>
 
 "Familiar ctrl shortcuts
 map <C-s> <esc>:w<CR>
+inoremap <C-s> <esc>:w<CR>
 noremap <C-f> <esc>:Files<CR>
 noremap ƒ :Ag<CR> 
 map <C-l> <esc>:ls<CR>
