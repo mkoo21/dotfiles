@@ -35,9 +35,11 @@ vnoremap <S-Tab> <gv
 inoremap <S-Tab> <C-d>
 
 "Familiar ctrl shortcuts
-map <C-s> <esc>:w<CR>
-inoremap <C-s> <esc>:w<CR>
-noremap <C-f> <esc>:Files<CR>
+nnoremap <C-s> :w<CR>
+inoremap <C-s> <ESC>:w<CR>
+inoremap <C-f> <ESC>:Files<CR>
+noremap <C-f> <ESC>:Files<CR>
+>>>>>>> origin/master
 noremap ƒ :Ag<CR> 
 map <C-l> <esc>:ls<CR>
 
@@ -105,6 +107,12 @@ au BufRead *.cmp set syntax=xml
 "Markdown
 au! BufRead,BufNewFile *.md set filetype=mkd
 au! BufRead,BufNewFile *.markdown set filetype=mkd
+
+"Salesforce Apex
+au! BufRead,BufNewFile *.cls set filetype=java
+
+"Markup
+:autocmd BufWritePre *.html :normal gg=G
 
 autocmd FileType mkd nnoremap <C-p> :w<Space><Bar><Space>!markdown<Space>%<Space>><Space>file.html<Space>&&<Space>open<Space>file.html<CR>
 autocmd FileType mkd inoremap <C-p> <ESC>:w<Space><Bar><Space>!markdown<Space>%<Space>><Space>file.html<Space>&&<Space>open<Space>file.html<CR>
