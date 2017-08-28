@@ -39,7 +39,6 @@ nnoremap <C-s> :w<CR>
 inoremap <C-s> <ESC>:w<CR>
 inoremap <C-f> <ESC>:Files<CR>
 noremap <C-f> <ESC>:Files<CR>
->>>>>>> origin/master
 noremap ƒ :Ag<CR> 
 map <C-l> <esc>:ls<CR>
 
