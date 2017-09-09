@@ -40,7 +40,11 @@ nnoremap <C-s> :w<CR>
 inoremap <C-s> <ESC>:w<CR>
 inoremap <C-f> <ESC>:Files<CR>
 noremap <C-f> <ESC>:Files<CR>
-noremap ƒ :Ag<CR> 
+inoremap ƒ <ESC>:Ag<CR> 
+nnoremap ƒ :Ag<CR> 
+inoremap f <ESC>:Ag<CR>
+nnoremap f :Ag<CR>
+
 map <C-l> <esc>:ls<CR>
 
 "Ctrl + c to system clipboard (unix)
