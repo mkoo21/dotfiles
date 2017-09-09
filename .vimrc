@@ -2,7 +2,7 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 call plug#begin('~/.vim/plugged')
- 
+"curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 "FZF, vim markdown, pandoc have requirements
 "Colorschemes may need TERM=xterm-256color
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } 
@@ -27,6 +27,7 @@ filetype plugin indent on    " required
 set clipboard=unnamed
 set mouse=a
 
+
 "Tab/shift tab indent
 nnoremap <Tab> ><ESC>gv
 nnoremap <S-Tab> <<<ESC>gv
@@ -41,6 +42,12 @@ inoremap <C-f> <ESC>:Files<CR>
 noremap <C-f> <ESC>:Files<CR>
 noremap ƒ :Ag<CR> 
 map <C-l> <esc>:ls<CR>
+
+"Ctrl + c to system clipboard (unix)
+vnoremap <C-c> "+y
+
+"Delete word with ctrl
+imap <C-BS> <C-W>
 
 "Code fold with spacebar
 set foldmethod=indent
