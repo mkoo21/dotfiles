@@ -131,5 +131,5 @@ export XDG_CONFIG_HOME=/home/martin/.config
 #tmux
 archey
 
-
+alias chrome="google-chrome-stable"
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
