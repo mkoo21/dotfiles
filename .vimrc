@@ -119,7 +119,7 @@ au! BufRead,BufNewFile *.md set filetype=mkd
 au! BufRead,BufNewFile *.markdown set filetype=mkd
 
 "Salesforce Apex
-au! BufRead,BufNewFile *.cls set filetype=java
+au! BufRead,BufNewFile *.(cls|trigger) set filetype=java
 
 "Markup
 :autocmd BufWritePre *.html :normal gg=G
