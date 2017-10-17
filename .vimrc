@@ -68,6 +68,7 @@ set expandtab
 set softtabstop=4
 set number
 set backspace=indent,eol,start
+set breakindent
 
 "Comments/alignment (for nerdcommenter)
 let g:NERDDefaultAlign = 'left'
