@@ -124,7 +124,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export ANDROID_HOME=~/Android/Sdk
+export ANDROID_HOME=~/Android/Sdk ## Install android studio
 export PATH=$ANDROID_HOME/tools:$PATH
 export XDG_CONFIG_HOME=/home/martin/.config
 
@@ -133,3 +133,13 @@ archey
 
 alias chrome="google-chrome-stable"
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+### THIS BLOCK IS FOR THE GOOGLE CLOUD CLI AND REQUIRES SOME MANUAL INSTALLATION ###
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/martin/google-cloud-sdk/path.bash.inc' ]; then source '/home/martin/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/martin/google-cloud-sdk/completion.bash.inc' ]; then source '/home/martin/google-cloud-sdk/completion.bash.inc'; fi
+
+export GOOGLE_APPLICATION_CREDENTIALS=/home/martin/Downloads/zapier-transcribe-mp3-77d86d4a08ed\(default-service-account\).json
