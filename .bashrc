@@ -127,6 +127,7 @@ fi
 export ANDROID_HOME=~/Android/Sdk ## Install android studio
 export PATH=$ANDROID_HOME/tools:$PATH
 export XDG_CONFIG_HOME=/home/martin/.config
+export GIT_EDITOR=vim
 
 #tmux
 archey
