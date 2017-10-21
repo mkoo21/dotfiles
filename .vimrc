@@ -46,6 +46,7 @@ nnoremap ƒ :Ag<CR>
 inoremap f <ESC>:Ag<CR>
 nnoremap f :Ag<CR>
 
+map <C-o> <esc>:Buffer<CR>
 map <C-l> <esc>:ls<CR>
 
 "Ctrl + c to system clipboard (unix)
@@ -68,6 +69,7 @@ set expandtab
 set softtabstop=4
 set number
 set backspace=indent,eol,start
+set breakindent
 
 "Comments/alignment (for nerdcommenter)
 let g:NERDDefaultAlign = 'left'
