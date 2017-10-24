@@ -46,8 +46,12 @@ nnoremap ƒ :Ag<CR>
 inoremap f <ESC>:Ag<CR>
 nnoremap f :Ag<CR>
 
-map <C-o> <esc>:Buffer<CR>
-map <C-l> <esc>:ls<CR>
+map <C-o> <ESC>:Buffer<CR>
+imap <C-o> <ESC>:Buffer<CR>
+map <C-l> <ESC>:ls<CR>
+imap <C-l> <ESC>:ls<CR>
+map  <ESC><leader>c<space>
+imap  <ESC><leader>c<space>
 
 "Ctrl + c to system clipboard (unix)
 vnoremap <C-c> "+y
