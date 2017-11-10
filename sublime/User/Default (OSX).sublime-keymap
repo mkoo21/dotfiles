@@ -1,0 +1,4 @@
+[
+	{ "keys": ["shift+tab"], "command": "unindent" },
+	{ "keys": ["super+g"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"} },
+]
