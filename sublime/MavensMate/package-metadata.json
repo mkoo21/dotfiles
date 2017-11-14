@@ -1,0 +1,1 @@
+{"version": "7.0.2", "platforms": ["*"], "url": "http://mavensmate.com", "sublime_text": ">=3000", "dependencies": [], "description": "Sublime Text plugin for Salesforce developers. Aims to replace the Eclipse-based Force.com IDE."}
