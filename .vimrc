@@ -28,6 +28,13 @@ filetype plugin indent on    " required
 set clipboard=unnamed
 set mouse=a
 
+"Splitting
+nnoremap <C-j> <C-W><C-J>
+nnoremap <C-k> <C-W><C-K>
+nnoremap <C-l> <C-W><C-L>
+nnoremap <C-h> <C-W><C-H>
+set splitbelow
+set splitright
 
 "Tab/shift tab indent
 nnoremap <Tab> ><ESC>gv
@@ -48,8 +55,8 @@ nnoremap f :Ag<CR>
 
 map <C-o> <ESC>:Buffer<CR>
 imap <C-o> <ESC>:Buffer<CR>
-map <C-l> <ESC>:ls<CR>
-imap <C-l> <ESC>:ls<CR>
+map <C-p> <ESC>:ls<CR>
+imap <C-p> <ESC>:ls<CR>
 map  <ESC><leader>c<space>
 imap  <ESC><leader>c<space>
 
