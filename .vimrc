@@ -36,6 +36,11 @@ nnoremap <C-h> <C-W><C-H>
 set splitbelow
 set splitright
 
+if &term =~ '^screen'
+    " tmux knows the extended mouse mode
+    set ttymouse=xterm2
+endif
+
 "Tab/shift tab indent
 nnoremap <Tab> ><ESC>gv
 nnoremap <S-Tab> <<<ESC>gv
