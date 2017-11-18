@@ -124,6 +124,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
+export PATH=$PATH:/usr/local/go/bin
 export ANDROID_HOME=~/Android/Sdk ## Install android studio
 export PATH=$ANDROID_HOME/tools:$PATH
 export XDG_CONFIG_HOME=/home/martin/.config
@@ -141,6 +142,13 @@ alias chrome="google-chrome-stable"
 if [ -f '/home/martin/google-cloud-sdk/path.bash.inc' ]; then source '/home/martin/google-cloud-sdk/path.bash.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/home/martin/google-cloud-sdk/completion.bash.inc' ]; then source '/home/martin/google-cloud-sdk/completion.bash.inc'; fi
+if [ -f '/home/martin/google-cloud-sdk/completion.bas.hinc' ]; then source '/home/martin/google-cloud-sdk/completion.bash.inc'; fi
 
 export GOOGLE_APPLICATION_CREDENTIALS=/home/martin/Downloads/zapier-transcribe-mp3-77d86d4a08ed\(default-service-account\).json
+
+export PATH=/usr/local/openmpi/bin:/usr/local/cuda/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+export LD_LIBRARY_PATH=/usr/local/cudnn/lib64:${LD_LIBRARY_PATH}
+export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib
+export PATH=/usr/local/lib:$PATH
+export PATH=/home/martin/dev/amazon-dsstne/src/amazon/dsstne/bin:$PATH
