@@ -19,6 +19,7 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'vim-syntastic/syntastic'
 Plug 'derekwyatt/vim-scala'
 Plug 'tomlion/vim-solidity'
+Plug 'kien/rainbow-parentheses.vim'
 "Plug 'JamshedVesuna/vim-markdown-preview'
 
 call plug#end()
@@ -148,3 +149,9 @@ if $VIM_CRONTAB == "true"
     set nobackup
     set nowritebackup
 endif
+
+"Rainbows
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
