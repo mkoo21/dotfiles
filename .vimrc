@@ -19,7 +19,7 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'vim-syntastic/syntastic'
 Plug 'derekwyatt/vim-scala'
 Plug 'tomlion/vim-solidity'
-Plug 'kien/rainbow-parentheses.vim'
+Plug 'kien/rainbow_parentheses.vim'
 "Plug 'JamshedVesuna/vim-markdown-preview'
 
 call plug#end()
