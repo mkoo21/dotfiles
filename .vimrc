@@ -20,6 +20,7 @@ Plug 'vim-syntastic/syntastic'
 Plug 'derekwyatt/vim-scala'
 Plug 'tomlion/vim-solidity'
 Plug 'kien/rainbow_parentheses.vim'
+Plug 'lervag/vimtex'
 "Plug 'JamshedVesuna/vim-markdown-preview'
 
 call plug#end()
