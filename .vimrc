@@ -23,6 +23,7 @@ Plug 'kien/rainbow_parentheses.vim'
 Plug 'lervag/vimtex'
 Plug 'yuttie/hydrangea-vim'
 "Plug 'JamshedVesuna/vim-markdown-preview'
+Plug 'jaxbot/browserlink.vim'
 
 call plug#end()
 
