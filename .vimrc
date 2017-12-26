@@ -31,7 +31,19 @@ filetype plugin indent on    " required
 
 "Using system clip requires vim-gtk
 set clipboard=unnamed
-set mouse=a
+
+"Make vim a little more mouse/clipboard-friendly
+function! ToggleMouse()
+    " check if mouse is enabled
+    if &mouse == 'a'
+        set mouse=
+    else
+        set mouse=a
+    endif
+endfunc
+
+map <C-m> :call ToggleMouse() <CR>
+"set mouse=a
 
 "Splitting
 nnoremap <C-j> <C-W><C-J>
