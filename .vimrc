@@ -44,6 +44,7 @@ function! ToggleMouse()
         set mouse=a
     endif
 endfunc
+set mouse=a
 
 map <C-m> :call ToggleMouse() <CR>
 "set mouse=a
