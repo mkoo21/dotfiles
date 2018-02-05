@@ -46,7 +46,7 @@ function! ToggleMouse()
 endfunc
 set mouse=a
 
-map <C-m> :call ToggleMouse() <CR>
+map <C-m> :call ToggleMouse()<CR>
 "set mouse=a
 
 "Splitting
@@ -81,8 +81,8 @@ nnoremap f :Ag<CR>
 
 map <C-o> <ESC>:Buffer<CR>
 imap <C-o> <ESC>:Buffer<CR>
-map <C-p> <ESC>:ls<CR>
-imap <C-p> <ESC>:ls<CR>
+"map <C-p> <ESC>:Buf<CR>
+"imap <C-p> <ESC>:Buf<CR>
 map  <ESC><leader>c<space>
 imap  <ESC><leader>c<space>
 
