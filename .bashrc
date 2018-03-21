@@ -1,5 +1,3 @@
-
-
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -133,7 +131,6 @@ export GIT_EDITOR=vim
 #tmux
 archey
 
-alias chrome="google-chrome-stable"
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 ### THIS BLOCK IS FOR THE GOOGLE CLOUD CLI AND REQUIRES SOME MANUAL INSTALLATION ###
