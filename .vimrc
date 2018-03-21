@@ -93,7 +93,7 @@ vnoremap <C-c> "+y
 imap <C-BS> <C-W>
 
 "More useful little A
-nnoremap a ea
+"nnoremap a ea
 
 "Code fold with spacebar
 set foldmethod=indent
