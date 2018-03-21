@@ -17,13 +17,13 @@ Plug 'ajh17/VimCompletesMe'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 "Plug 'ervandew/supertab'
-Plug 'vim-pandoc/vim-pandoc'
-Plug 'vim-pandoc/vim-pandoc-syntax'
-Plug 'vim-syntastic/syntastic'
+"Plug 'vim-pandoc/vim-pandoc'
+"Plug 'vim-pandoc/vim-pandoc-syntax'
+"Plug 'vim-syntastic/syntastic'
 Plug 'derekwyatt/vim-scala'
 Plug 'tomlion/vim-solidity'
 Plug 'eapache/rainbow_parentheses.vim'
-Plug 'lervag/vimtex'
+"Plug 'lervag/vimtex'
 Plug 'yuttie/hydrangea-vim'
 "Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'jaxbot/browserlink.vim'
@@ -92,6 +92,9 @@ vnoremap <C-c> "+y
 "Delete word with ctrl
 imap <C-BS> <C-W>
 
+"More useful little A
+nnoremap a ea
+
 "Code fold with spacebar
 set foldmethod=indent
 set foldlevel=99
@@ -128,6 +131,9 @@ inoremap <C-\> <ESC>:NERDTreeToggle<CR>
 au FileType python
     \set textwidth=79
     \set fileformat=unix
+
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
 
 "For 256 colors in tmux on mac (tmux seems to only work with screen-256-color
 "which is still different from xterm-256-color)
