@@ -12,11 +12,11 @@
         "browser": true,
         "node": true,
         "jest": true
-    }
+    },
     "rules": {
         "semi": 1,
         "no-eval": true,
         "no-tabs": true,
-        "no-var": true
-    },
+        "no-var": 1
+    }
 }
