@@ -17,6 +17,7 @@
         "semi": 1,
         "no-eval": true,
         "no-tabs": true,
-        "no-var": 1
+        "no-var": 1,
+        "indent": 1
     }
 }
