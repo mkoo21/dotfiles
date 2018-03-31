@@ -15,8 +15,8 @@
     },
     "rules": {
         "semi": 1,
-        "no-eval": true,
-        "no-tabs": true,
+        "no-eval": 2,
+        "no-tabs": 2,
         "no-var": 1,
         "indent": 1
     }
