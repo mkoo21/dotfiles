@@ -45,9 +45,10 @@ function! ToggleMouse()
     endif
 endfunc
 set mouse=a
-
 map <C-m> :call ToggleMouse()<CR>
-"set mouse=a
+
+"auto dos2unix
+set ff=unix
 
 "Splitting
 nnoremap <C-j> <C-W><C-J>
