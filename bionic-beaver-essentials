@@ -4,14 +4,8 @@
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
 sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
 
-#VSCode
-curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
-sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
-
-
 sudo apt update
-sudo apt install -y curl git google-chrome-stable python-pip vim synapse code tmux
+sudo apt install -y curl git google-chrome-stable python-pip vim synapse tmux
 
 #Dotfiles
 git clone https://github.com/mkoo21/dotfiles.git
@@ -20,13 +14,26 @@ sudo ln -sf dotfiles/.bashrc .bashrc
 sudo ln -sf dotfiles/.bash_aliases .bash_aliases
 sudo ln -sf dotfiles/.tmux.conf .tmux.conf
 
+#Setup vim 
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+#VSCode
+curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
+sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+sudo apt install -y code
+
+#NodeJS
+curl -sL https://deb.nodesource.com/setup_8.x -o nodesource_setup.sh
+sudo bash nodesource_setup.sh
+sudo apt install -y nodejs build-essential
+rm nodesource_setup.sh
+
 #Archey 
 wget https://github.com/downloads/djmelik/archey/archey-0.2.8.deb
 sudo apt install -y scrot lsb-release
 sudo dpkg -i archey-0.2.8.deb
-
-#Setup vim 
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+rm archey-0.2.8.deb
 
 #You are done!
 source ~/.bashrc

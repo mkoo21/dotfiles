@@ -1,2 +1,2 @@
-### Making mistakes is human.
-### _`Automating them is devops`_
+### "Making mistakes is human.
+### _Automating_ them is _`devops`_."
