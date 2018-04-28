@@ -11,5 +11,22 @@ sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode s
 
 
 sudo apt update
-sudo apt install -y google-chrome-stable python-pip git synapse code
+sudo apt install -y curl git google-chrome-stable python-pip vim synapse code tmux
 
+#Dotfiles
+git clone https://github.com/mkoo21/dotfiles.git
+sudo ln -sf dotfiles/.vimrc .vimrc
+sudo ln -sf dotfiles/.bashrc .bashrc
+sudo ln -sf dotfiles/.bash_aliases .bash_aliases
+sudo ln -sf dotfiles/.tmux.conf .tmux.conf
+
+#Archey 
+wget https://github.com/downloads/djmelik/archey/archey-0.2.8.deb
+sudo apt install -y scrot lsb-release
+sudo dpkg -i archey-0.2.8.deb
+
+#Setup vim 
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+#You are done!
+source ~/.bashrc
