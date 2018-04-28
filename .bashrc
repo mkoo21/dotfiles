@@ -124,7 +124,7 @@ fi
 
 export PATH=$PATH:/usr/local/go/bin
 export ANDROID_HOME=~/Android/Sdk ## Install android studio
-export PATH = $PATH:$HOME/.npm-packages/bin ## Node local (avoid npm)
+export PATH=$PATH:$HOME/.npm-packages/bin ## Node local (avoid npm)
 export PATH=$ANDROID_HOME/tools:$PATH ## Android studio
 export XDG_CONFIG_HOME=/home/martin/.config
 export GIT_EDITOR=vim
