@@ -1,11 +1,13 @@
 #!/bin/bash
 
+cd ~
+
 #Chrome
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
 sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
 
 sudo apt update
-sudo apt install -y curl git google-chrome-stable python-pip vim synapse tmux
+sudo apt install -y curl git google-chrome-stable python3-pip vim synapse tmux xclip
 
 #Dotfiles
 git clone https://github.com/mkoo21/dotfiles.git
@@ -28,6 +30,8 @@ curl -sL https://deb.nodesource.com/setup_8.x -o nodesource_setup.sh
 sudo bash nodesource_setup.sh
 sudo apt install -y nodejs build-essential
 rm nodesource_setup.sh
+#Put node modules somewhere that doesn't require sudo
+npm config set prefix ~/npm
 
 #Archey 
 wget https://github.com/downloads/djmelik/archey/archey-0.2.8.deb
@@ -35,5 +39,23 @@ sudo apt install -y scrot lsb-release
 sudo dpkg -i archey-0.2.8.deb
 rm archey-0.2.8.deb
 
+#Scala (optional bc HUEG)
+#sudo apt install -y scala
+#echo "deb https://dl.bintray.com/sbt/debian /" | sudo tee -a /etc/apt/sources.list.d/sbt.list
+#sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2EE0EA64E40A89B84B2DF73499E82A75642AC823
+#sudo apt-get update
+#sudo apt-get install sbt
+
+#Intellij (replace with latest ver?)
+#Setup manually by running /opt/idea-IC*/bin/idea.sh
+#wget https://download.jetbrains.com/idea/ideaIC-2018.1.2.tar.gz
+#sudo tar xf ideaIC-2018.1.2.tar.gz -C /opt/
+
+#Mate preferences
+#sudo apt install dconf-tools
+#dconf write /org/mate/terminal/global/ctrl-tab-switch-tabs true
+#mate-terminal --load-config ~/dotfiles/mate/martin-config
+
 #You are done!
 source ~/.bashrc
+cd -
