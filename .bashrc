@@ -129,9 +129,10 @@ export PATH=$ANDROID_HOME/tools:$PATH ## Android studio
 export XDG_CONFIG_HOME=/home/martin/.config
 export GIT_EDITOR=vim
 
-#tmux
+#Set node global path to home dir (in case it was installed with sudo)
+export PATH="$PATH:$HOME/npm/bin"
+export NODE_PATH="$NODE_PATH:$HOME/npm/lib/node_modules"
 archey
-
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 ### THIS BLOCK IS FOR THE GOOGLE CLOUD CLI AND REQUIRES SOME MANUAL INSTALLATION ###
