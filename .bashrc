@@ -151,3 +151,8 @@ export LD_LIBRARY_PATH=/usr/local/cudnn/lib64:${LD_LIBRARY_PATH}
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib
 export PATH=/usr/local/lib:$PATH
 export PATH=/home/martin/dev/amazon-dsstne/src/amazon/dsstne/bin:$PATH
+
+#thefuck
+eval $(thefuck --alias)
+eval $(thefuck --alias shit)
+eval $(thefuck --alias FUCK)
