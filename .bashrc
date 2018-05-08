@@ -128,6 +128,8 @@ export PATH=$PATH:$HOME/.npm-packages/bin ## Node local (avoid npm)
 export PATH=$ANDROID_HOME/tools:$PATH ## Android studio
 export XDG_CONFIG_HOME=/home/martin/.config
 export GIT_EDITOR=vim
+export SCALA_HOME=/usr/local/share/scala
+export PATH=$PATH:$SCALA_HOME/bin
 
 #Set node global path to home dir (in case it was installed with sudo)
 export PATH="$PATH:$HOME/npm/bin"
