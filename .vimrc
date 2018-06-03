@@ -25,6 +25,7 @@ Plug 'tomlion/vim-solidity'
 Plug 'eapache/rainbow_parentheses.vim'
 "Plug 'lervag/vimtex'
 Plug 'yuttie/hydrangea-vim'
+Plug 'nvie/vim-flake8'
 "Plug 'JamshedVesuna/vim-markdown-preview'
 "Plug 'jaxbot/browserlink.vim'
 
@@ -176,8 +177,9 @@ autocmd FileType mkd inoremap <C-p> <ESC>:w<Space><Bar><Space>!markdown<Space>%<
 
 "Mac
 "let g:onedark_termcolors=256
-colorscheme onedark
-set background=dark
+"colorscheme onedark
+colorscheme hydrangea
+"set background=dark
 
 "Linux translucency
 hi Normal ctermbg=none
