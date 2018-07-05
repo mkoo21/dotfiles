@@ -26,6 +26,7 @@ Plug 'eapache/rainbow_parentheses.vim'
 "Plug 'lervag/vimtex'
 Plug 'yuttie/hydrangea-vim'
 Plug 'nvie/vim-flake8'
+Plug 'elmcast/elm-vim' 
 "Plug 'JamshedVesuna/vim-markdown-preview'
 "Plug 'jaxbot/browserlink.vim'
 
@@ -159,6 +160,9 @@ if (empty($TMUX))
     endif
 endif
 
+"JS template
+au BufRead *.ejs set syntax=xml
+
 "Salesforce lightning 
 au BufRead *.cmp set syntax=xml
 
@@ -174,6 +178,9 @@ au! BufRead,BufNewFile *.(cls|trigger) set filetype=java
 
 autocmd FileType mkd nnoremap <C-p> :w<Space><Bar><Space>!markdown<Space>%<Space>><Space>file.html<Space>&&<Space>open<Space>file.html<CR>
 autocmd FileType mkd inoremap <C-p> <ESC>:w<Space><Bar><Space>!markdown<Space>%<Space>><Space>file.html<Space>&&<Space>open<Space>file.html<CR>
+
+"Stop littering swap files
+set noswapfile
 
 "Mac
 "let g:onedark_termcolors=256
