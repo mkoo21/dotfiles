@@ -1,1 +1,1 @@
-### "Making mistakes is human. _Automating_ them is `DevOps`"
+### "Making mistakes is human. I'm a coder so I _automate_ mine."
