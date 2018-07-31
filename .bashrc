@@ -156,7 +156,11 @@ export PATH=/home/martin/dev/amazon-dsstne/src/amazon/dsstne/bin:$PATH
 export SPARK_HOME=/usr/local/spark
 #export PYSPARK_DRIVER_PYTHON=/usr/bin/python3
 
+#Stop <C-s> from freezing screen
+stty -ixon
+
 #thefuck
 eval $(thefuck --alias)
 eval $(thefuck --alias shit)
 eval $(thefuck --alias FUCK)
+
