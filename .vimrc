@@ -77,10 +77,15 @@ nnoremap <C-s> :w<CR>
 inoremap <C-s> <ESC>:w<CR>
 inoremap <C-f> <ESC>:Files<CR>
 noremap <C-f> <ESC>:Files<CR>
-inoremap ƒ <ESC>:Ag<CR> 
-nnoremap ƒ :Ag<CR> 
-inoremap f <ESC>:Ag<CR>
-nnoremap f :Ag<CR>
+
+
+"Mac 
+"inoremap ƒ <ESC>:Ag<CR> 
+"nnoremap ƒ :Ag<CR> 
+
+"Linux
+inoremap f <ESC>:Ag<CR> 
+nnoremap f :Ag<CR> 
 
 map <C-o> <ESC>:Buffer<CR>
 imap <C-o> <ESC>:Buffer<CR>
@@ -95,6 +100,9 @@ vnoremap <C-c> "+y
 "Delete word with ctrl
 imap <C-BS> <C-W>
 
+"For scrolling in tmux
+noremap [1;2A] <C-b>
+noremap [1;2B] <C-d>
 "More useful little A
 "nnoremap a ea
 
@@ -183,10 +191,11 @@ autocmd FileType mkd inoremap <C-p> <ESC>:w<Space><Bar><Space>!markdown<Space>%<
 set noswapfile
 
 "Mac
-"let g:onedark_termcolors=256
-"colorscheme onedark
-colorscheme hydrangea
-"set background=dark
+let g:onedark_termcolors=256
+syntax on
+colorscheme onedark
+set background=dark
+"colorscheme hydrangea
 
 "Linux translucency
 hi Normal ctermbg=none
@@ -213,3 +222,4 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_eslint_exe = 'npm run lint --'
+
