@@ -159,6 +159,11 @@ export SPARK_HOME=/usr/local/spark
 #Stop <C-s> from freezing screen
 stty -ixon
 
+#Nondescript ssh-agent
+eval "$(ssh-agent -s)" > /dev/null
+ssh-add ~/.ssh/id_rsa 2> /dev/null
+trap 'test -n "$SSH_AGENT_PID" && eval `/usr/bin/ssh-agent -k`' 0
+
 #thefuck
 eval $(thefuck --alias)
 eval $(thefuck --alias shit)
