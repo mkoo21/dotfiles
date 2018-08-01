@@ -7,3 +7,5 @@ alias MMD='LANG="ja_JP.UTF8" wine MikuMikuDance.exe'
 alias windows='cd /mnt/c'
 alias devenv='cd /mnt/c/devenv'
 
+#Linux utils
+alias sysclip='xclip -sel c'
