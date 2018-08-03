@@ -145,6 +145,14 @@ if [ -f '/home/martin/google-cloud-sdk/path.bash.inc' ]; then source '/home/mart
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/martin/google-cloud-sdk/completion.bas.hinc' ]; then source '/home/martin/google-cloud-sdk/completion.bash.inc'; fi
 
+#git autocomplete
+if [ -f ~/etc/.git-completion.bash ]; then
+    . ~/etc/.git-completion.bash
+else 
+    curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/etc/.git-completion.bash
+    . ~/etc/.git-completion.bash
+fi
+
 export GOOGLE_APPLICATION_CREDENTIALS=/home/martin/Downloads/zapier-transcribe-mp3-77d86d4a08ed\(default-service-account\).json
 
 export PATH=/usr/local/openmpi/bin:/usr/local/cuda/bin:$PATH
