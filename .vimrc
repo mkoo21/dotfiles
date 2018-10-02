@@ -36,6 +36,7 @@ filetype plugin indent on    " required
 
 "Using system clip requires vim-gtk
 set clipboard=unnamed
+set pastetoggle=<F2>
 
 "Make vim a little more mouse/clipboard-friendly
 function! ToggleMouse()
@@ -112,12 +113,12 @@ set foldlevel=99
 nnoremap <space> za
 
 "Alignment/tabs/line numbers
-set shiftwidth=4
+set shiftwidth=2
 set autoindent
 set cindent
-set tabstop=4
+set tabstop=2
 set expandtab
-set softtabstop=4
+set softtabstop=2
 set number
 set backspace=indent,eol,start
 set breakindent
@@ -187,15 +188,16 @@ autocmd FileType mkd inoremap <C-p> <ESC>:w<Space><Bar><Space>!markdown<Space>%<
 "Stop littering swap files
 set noswapfile
 
-"Mac
-let g:onedark_termcolors=256
+"Unset the background to use terminal's bg (e.g. for translucency). Set after
+"colorscheme to override
+"hi Normal ctermbg=none
+
 syntax on
 colorscheme onedark
 set background=dark
 "colorscheme hydrangea
-
-"Linux translucency
 hi Normal ctermbg=none
+
 
 if $VIM_CRONTAB == "true"
     set nobackup
