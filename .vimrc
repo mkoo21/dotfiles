@@ -122,6 +122,7 @@ set softtabstop=2
 set number
 set backspace=indent,eol,start
 set breakindent
+set statusline+=col:\ %c,
 
 "Comments/alignment (for nerdcommenter)
 let g:NERDDefaultAlign = 'left'
