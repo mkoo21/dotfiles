@@ -134,7 +134,7 @@ export PATH=$PATH:$SCALA_HOME/bin
 #Set node global path to home dir (in case it was installed with sudo)
 export PATH="$PATH:$HOME/npm/bin"
 export NODE_PATH="$NODE_PATH:$HOME/npm/lib/node_modules"
-archey
+
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 ### THIS BLOCK IS FOR THE GOOGLE CLOUD CLI AND REQUIRES SOME MANUAL INSTALLATION ###
@@ -177,3 +177,4 @@ eval $(thefuck --alias)
 eval $(thefuck --alias shit)
 eval $(thefuck --alias FUCK)
 
+screenfetch
