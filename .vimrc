@@ -77,10 +77,10 @@ nnoremap <C-s> :w<CR>
 inoremap <C-s> <ESC>:w<CR>
 inoremap <C-f> <ESC>:Files<CR>
 noremap <C-f> <ESC>:Files<CR>
-inoremap ƒ <ESC>:Ag<CR> 
-nnoremap ƒ :Ag<CR> 
-inoremap f <ESC>:Ag<CR>
-nnoremap f :Ag<CR>
+"inoremap ƒ <ESC>:Ag<CR> 
+"nnoremap ƒ :Ag<CR> 
+"inoremap f <ESC>:Ag<CR>
+"nnoremap f :Ag<CR>
 
 map <C-o> <ESC>:Buffer<CR>
 imap <C-o> <ESC>:Buffer<CR>
@@ -111,6 +111,7 @@ set tabstop=4
 set expandtab
 set softtabstop=4
 set number
+"set highlight lineNr ctermfg=white "if line numbers are not visible 
 set backspace=indent,eol,start
 set breakindent
 
