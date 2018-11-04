@@ -36,6 +36,7 @@ filetype plugin indent on    " required
 
 "Using system clip requires vim-gtk
 set clipboard=unnamed
+set pastetoggle=<F2>
 
 "Make vim a little more mouse/clipboard-friendly
 function! ToggleMouse()
@@ -77,10 +78,14 @@ nnoremap <C-s> :w<CR>
 inoremap <C-s> <ESC>:w<CR>
 inoremap <C-f> <ESC>:Files<CR>
 noremap <C-f> <ESC>:Files<CR>
+
+"Mac 
 "inoremap ƒ <ESC>:Ag<CR> 
 "nnoremap ƒ :Ag<CR> 
-"inoremap f <ESC>:Ag<CR>
-"nnoremap f :Ag<CR>
+
+"Linux
+inoremap f <ESC>:Ag<CR> 
+nnoremap f :Ag<CR> 
 
 map <C-o> <ESC>:Buffer<CR>
 imap <C-o> <ESC>:Buffer<CR>
@@ -95,6 +100,9 @@ vnoremap <C-c> "+y
 "Delete word with ctrl
 imap <C-BS> <C-W>
 
+"For scrolling in tmux
+noremap [1;2A] <C-b>
+noremap [1;2B] <C-d>
 "More useful little A
 "nnoremap a ea
 
@@ -104,16 +112,17 @@ set foldlevel=99
 nnoremap <space> za
 
 "Alignment/tabs/line numbers
-set shiftwidth=4
+set shiftwidth=2
 set autoindent
 set cindent
-set tabstop=4
+set tabstop=2
 set expandtab
-set softtabstop=4
+set softtabstop=2
 set number
-"set highlight lineNr ctermfg=white "if line numbers are not visible 
+hi lineNr ctermfg=grey "if line numbers are not visible 
 set backspace=indent,eol,start
 set breakindent
+set statusline+=col:\ %c,
 
 "Comments/alignment (for nerdcommenter)
 let g:NERDDefaultAlign = 'left'
@@ -174,22 +183,20 @@ au! BufRead,BufNewFile *.markdown set filetype=mkd
 "Salesforce Apex
 au! BufRead,BufNewFile *.(cls|trigger) set filetype=java
 
-"Markup
-:autocmd BufWritePre *.html :normal gg=G
-
 autocmd FileType mkd nnoremap <C-p> :w<Space><Bar><Space>!markdown<Space>%<Space>><Space>file.html<Space>&&<Space>open<Space>file.html<CR>
 autocmd FileType mkd inoremap <C-p> <ESC>:w<Space><Bar><Space>!markdown<Space>%<Space>><Space>file.html<Space>&&<Space>open<Space>file.html<CR>
 
 "Stop littering swap files
 set noswapfile
 
-"Mac
-"let g:onedark_termcolors=256
-"colorscheme onedark
-colorscheme hydrangea
-"set background=dark
+"Unset the background to use terminal's bg (e.g. for translucency). Set after
+"colorscheme to override
+"hi Normal ctermbg=none
 
-"Linux translucency
+syntax on
+colorscheme onedark
+set background=dark
+"colorscheme hydrangea
 hi Normal ctermbg=none
 
 
@@ -214,3 +221,33 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_eslint_exe = 'npm run lint --'
+
+"xmllint
+function! DoPrettyXML()
+  " save the filetype so we can restore it later
+  let l:origft = &ft
+  set ft=
+  " delete the xml header if it exists. This will
+  " permit us to surround the document with fake tags
+  " without creating invalid xml.
+  1s/<?xml .*?>//e
+  " insert fake tags around the entire document.
+  " This will permit us to pretty-format excerpts of
+  " XML that may contain multiple top-level elements.
+  0put ='<PrettyXML>'
+  $put ='</PrettyXML>'
+  silent %!xmllint --format -
+  " xmllint will insert an <?xml?> header. it's easy enough to delete
+  " if you don't want it.
+  " delete the fake tags
+  2d
+  $d
+  " restore the 'normal' indentation, which is one extra level
+  " too deep due to the extra tags we wrapped around the document.
+  silent %<
+  " back to home
+  1
+  " restore the filetype
+  exe "set ft=" . l:origft
+endfunction
+command! PrettyXML call DoPrettyXML()

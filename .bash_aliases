@@ -7,3 +7,6 @@ alias android-studio="/usr/local/etc/android-studio/bin/studio.sh"
 alias windows='cd /mnt/c'
 alias devenv='cd /mnt/c/devenv'
 alias oanda='sudo openconnect vpn.oanda.com'
+
+#Linux utils
+alias sysclip='xclip -sel c'

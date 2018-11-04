@@ -134,7 +134,7 @@ export PATH=$PATH:$SCALA_HOME/bin
 #Set node global path to home dir (in case it was installed with sudo)
 export PATH="$PATH:$HOME/npm/bin"
 export NODE_PATH="$NODE_PATH:$HOME/npm/lib/node_modules"
-archey
+
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 ### THIS BLOCK IS FOR THE GOOGLE CLOUD CLI AND REQUIRES SOME MANUAL INSTALLATION ###
@@ -144,6 +144,14 @@ if [ -f '/home/martin/google-cloud-sdk/path.bash.inc' ]; then source '/home/mart
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/martin/google-cloud-sdk/completion.bas.hinc' ]; then source '/home/martin/google-cloud-sdk/completion.bash.inc'; fi
+
+#git autocomplete
+if [ -f ~/etc/.git-completion.bash ]; then
+    . ~/etc/.git-completion.bash
+else 
+    curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/etc/.git-completion.bash
+    . ~/etc/.git-completion.bash
+fi
 
 export GOOGLE_APPLICATION_CREDENTIALS=/home/martin/Downloads/zapier-transcribe-mp3-77d86d4a08ed\(default-service-account\).json
 
@@ -156,7 +164,17 @@ export PATH=/home/martin/dev/amazon-dsstne/src/amazon/dsstne/bin:$PATH
 export SPARK_HOME=/usr/local/spark
 #export PYSPARK_DRIVER_PYTHON=/usr/bin/python3
 
+#Stop <C-s> from freezing screen
+stty -ixon
+
+#Nondescript ssh-agent
+eval "$(ssh-agent -s)" > /dev/null
+ssh-add ~/.ssh/id_rsa 2> /dev/null
+trap 'test -n "$SSH_AGENT_PID" && eval `/usr/bin/ssh-agent -k`' 0
+
 #thefuck
 eval $(thefuck --alias)
 eval $(thefuck --alias shit)
 eval $(thefuck --alias FUCK)
+
+screenfetch
