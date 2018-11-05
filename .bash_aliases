@@ -9,4 +9,5 @@ alias devenv='cd /mnt/c/devenv'
 alias oanda='sudo openconnect vpn.oanda.com'
 
 #Linux utils
-alias sysclip='xclip -sel c'
+alias clip='xclip -sel c'
+alias hs='history | grep' #(But fzf C-R is better)
