@@ -11,3 +11,5 @@ alias oanda='sudo openconnect vpn.oanda.com'
 #Linux utils
 alias clip='xclip -sel c'
 alias hs='history | grep' #(But fzf C-R is better)
+alias ls='ls --color'
+alias grep='grep --color'
