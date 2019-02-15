@@ -10,6 +10,9 @@ alias oanda='sudo openconnect vpn.oanda.com'
 
 # Linux
 alias sysclip='xclip -sel c'
+alias hs='history | grep' #(But fzf C-R is better)
+alias ls='ls --color'
+alias grep='grep --color'
 
 # Javascriptz
 alias babel-node="babel-node --presets es2015"

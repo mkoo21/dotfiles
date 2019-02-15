@@ -119,7 +119,7 @@ set tabstop=2
 set expandtab
 set softtabstop=2
 set number
-hi lineNr ctermfg=grey "if line numbers are not visible 
+hi lineNr ctermfg=DarkGray
 set backspace=indent,eol,start
 set breakindent
 set statusline+=col:\ %c,
