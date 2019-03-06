@@ -1,4 +1,4 @@
-alias chrome="google-chrome-stable || google-chrome-unstable"
+alias chrome="/opt/google/chrome/google-chrome"
 alias weather='curl wttr.in/toronto'
 alias MMD='LANG="ja_JP.UTF8" wine MikuMikuDance.exe'
 alias android-studio="/usr/local/etc/android-studio/bin/studio.sh"
@@ -13,6 +13,7 @@ alias sysclip='xclip -sel c'
 alias hs='history | grep' #(But fzf C-R is better)
 alias ls='ls --color'
 alias grep='grep --color'
+alias vi = 'nvim'
 
 # Javascriptz
 alias babel-node="babel-node --presets es2015"
