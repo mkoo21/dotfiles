@@ -9,7 +9,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'scrooloose/nerdtree'
-Plug 'joshdick/onedark.vim'
+"Plug 'joshdick/onedark.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'Raimondi/delimitMate'
 "Note to self this is for autocompletion, not indenting; use :set paste for copypasta
@@ -194,9 +194,8 @@ set noswapfile
 "hi Normal ctermbg=none
 
 syntax on
-colorscheme onedark
+"colorscheme onedark
 set background=dark
-"colorscheme hydrangea
 hi Normal ctermbg=none
 
 

@@ -160,8 +160,6 @@ export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PAT
 export LD_LIBRARY_PATH=/usr/local/cudnn/lib64:${LD_LIBRARY_PATH}
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib
 export PATH=/usr/local/lib:$PATH
-export PATH=/home/martin/dev/amazon-dsstne/src/amazon/dsstne/bin:$PATH
-export SPARK_HOME=/usr/local/spark
 #export PYSPARK_DRIVER_PYTHON=/usr/bin/python3
 
 #Stop <C-s> from freezing screen
@@ -178,4 +176,4 @@ eval $(thefuck --alias)
 eval $(thefuck --alias shit)
 eval $(thefuck --alias FUCK)
 
-screenfetch
+neofetch

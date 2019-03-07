@@ -1,1 +1,1 @@
-### A work forever in progress
+### Work forever in progress
