@@ -14,6 +14,7 @@ alias hs='history | grep' #(But fzf C-R is better)
 alias ls='ls --color'
 alias grep='grep --color'
 alias vi='nvim'
+alias vim="nvim"
 
 # Javascriptz
 alias babel-node="babel-node --presets es2015"
