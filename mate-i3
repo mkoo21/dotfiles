@@ -1,0 +1,12 @@
+```
+sudo pacman -S mate mate-extra
+sudo pacman -S i3 dmenu-manjaro
+dconf write /org/mate/desktop/session/required-components/windowmanager "'i3'"
+dconf write /org/mate/desktop/background/show-desktop-icons "false"
+```
+Relog
+To undo dconf changes:
+```
+dconf write /org/mate/desktop/session/required-components/windowmanager "'marco'"
+dconf write /org/mate/desktop/background/show-desktop-icons "true"
+```

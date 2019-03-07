@@ -173,6 +173,7 @@ ssh-add ~/.ssh/id_rsa 2> /dev/null
 trap 'test -n "$SSH_AGENT_PID" && eval `/usr/bin/ssh-agent -k`' 0
 
 #thefuck
+export PATH=$PATH:/home/martin/.local/bin
 eval $(thefuck --alias)
 eval $(thefuck --alias shit)
 eval $(thefuck --alias FUCK)
