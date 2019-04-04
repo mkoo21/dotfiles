@@ -26,9 +26,11 @@ Plug 'eapache/rainbow_parentheses.vim'
 "Plug 'lervag/vimtex'
 Plug 'yuttie/hydrangea-vim'
 Plug 'nvie/vim-flake8'
-Plug 'elmcast/elm-vim' 
+Plug 'elmcast/elm-vim'
 "Plug 'JamshedVesuna/vim-markdown-preview'
 "Plug 'jaxbot/browserlink.vim'
+Plug 'Quramy/tsuquyomi'
+Plug 'leafgarland/typescript-vim'
 
 call plug#end()
 
@@ -84,8 +86,8 @@ noremap <C-f> <ESC>:Files<CR>
 "nnoremap ƒ :Ag<CR> 
 
 "Linux
-inoremap f <ESC>:Ag<CR> 
-nnoremap f :Ag<CR> 
+inoremap f <ESC> :Ag<CR> 
+nnoremap <C-a> :Ag<CR> 
 
 map <C-o> <ESC>:Buffer<CR>
 imap <C-o> <ESC>:Buffer<CR>
