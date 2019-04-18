@@ -6,7 +6,6 @@ alias android-studio="/usr/local/etc/android-studio/bin/studio.sh"
 # Windoze
 alias windows='cd /mnt/c'
 alias devenv='cd /mnt/c/devenv'
-alias oanda='sudo openconnect vpn.oanda.com'
 
 # Linux
 alias sysclip='xclip -sel c'
@@ -15,6 +14,7 @@ alias ls='ls --color'
 alias grep='grep --color'
 alias vi='nvim'
 alias vim="nvim"
+alias torb="~/etc/tor-browser_en-US/Browser/start-tor-browser"
 
 # Javascriptz
 alias babel-node="babel-node --presets es2015"

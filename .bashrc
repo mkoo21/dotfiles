@@ -176,4 +176,4 @@ eval $(thefuck --alias)
 eval $(thefuck --alias shit)
 eval $(thefuck --alias FUCK)
 
-neofetch
+screenfetch
