@@ -127,7 +127,7 @@ export ANDROID_HOME=~/Android/Sdk ## Install android studio
 export PATH=$PATH:$HOME/.npm-packages/bin ## Node local (avoid npm)
 export PATH=$ANDROID_HOME/tools:$PATH ## Android studio
 export XDG_CONFIG_HOME=/home/martin/.config
-export GIT_EDITOR=vim
+export GIT_EDITOR=nvim
 export SCALA_HOME=/usr/local/share/scala
 export PATH=$PATH:$SCALA_HOME/bin
 
@@ -152,8 +152,6 @@ else
     curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/etc/.git-completion.bash
     . ~/etc/.git-completion.bash
 fi
-
-export GOOGLE_APPLICATION_CREDENTIALS=/home/martin/Downloads/zapier-transcribe-mp3-77d86d4a08ed\(default-service-account\).json
 
 export PATH=/usr/local/openmpi/bin:/usr/local/cuda/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
