@@ -128,6 +128,7 @@ export PATH=$PATH:$HOME/.npm-packages/bin ## Node local (avoid npm)
 export PATH=$ANDROID_HOME/tools:$PATH ## Android studio
 export XDG_CONFIG_HOME=/home/martin/.config
 export GIT_EDITOR=nvim
+export EDITOR=nvim
 export SCALA_HOME=/usr/local/share/scala
 export PATH=$PATH:$SCALA_HOME/bin
 
