@@ -19,7 +19,6 @@ Plug 'tpope/vim-surround'
 "Plug 'ervandew/supertab'
 "Plug 'vim-pandoc/vim-pandoc'
 "Plug 'vim-pandoc/vim-pandoc-syntax'
-Plug 'vim-syntastic/syntastic'
 Plug 'derekwyatt/vim-scala'
 Plug 'tomlion/vim-solidity'
 Plug 'eapache/rainbow_parentheses.vim'
@@ -30,7 +29,7 @@ Plug 'elmcast/elm-vim'
 "Plug 'JamshedVesuna/vim-markdown-preview'
 "Plug 'jaxbot/browserlink.vim'
 Plug 'Quramy/tsuquyomi'
-Plug 'leafgarland/typescript-vim'
+Plug 'w0rp/ale'
 
 call plug#end()
 
@@ -212,16 +211,12 @@ au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 
-"Eslint syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_javascript_eslint_exe = 'npm run lint --'
+"Ale (async linting)
+let g:ale_linters = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'javascript': ['eslint'],
+\   'python': ['flake8', 'pylint']
+\}
 
 "xmllint
 function! DoPrettyXML()
