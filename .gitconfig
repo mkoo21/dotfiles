@@ -1,0 +1,13 @@
+[user]
+	email = koo.martin@gmail.com
+	name = Martin Koo
+[alias]
+  cd = checkout
+	co = checkout
+	br = branch
+	st = status
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
