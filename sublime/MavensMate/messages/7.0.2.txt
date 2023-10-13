@@ -1,3 +1,0 @@
-MavensMate-SublimeText 7.0.2 changelog
-
-- Resolves issue creating new projects from an existing directory

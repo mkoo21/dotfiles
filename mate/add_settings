@@ -1,5 +1,0 @@
-#!/bin/bash
-
-sudo apt install dconf-tools
-dconf write /org/mate/terminal/global/ctrl-tab-switch-tabs true
-mate-terminal --load-config martin-config
