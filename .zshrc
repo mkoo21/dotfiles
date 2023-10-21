@@ -100,3 +100,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vi="nvim"
+
+
+neofetch --disable GPU
+source /usr/share/nvm/init-nvm.sh
