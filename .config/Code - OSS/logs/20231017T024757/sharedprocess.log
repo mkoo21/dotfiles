@@ -1,0 +1,15 @@
+2023-10-17 02:48:02.643 [info] Getting Manifest... bradlc.vscode-tailwindcss
+2023-10-17 02:48:03.118 [info] Installing extension: bradlc.vscode-tailwindcss
+2023-10-17 02:48:04.581 [info] Extension signature verification is not done: bradlc.vscode-tailwindcss
+2023-10-17 02:48:04.830 [info] Extracted extension to file:///home/martin/.vscode-oss/extensions/bradlc.vscode-tailwindcss-0.10.1-universal: bradlc.vscode-tailwindcss
+2023-10-17 02:48:04.839 [info] Renamed to /home/martin/.vscode-oss/extensions/bradlc.vscode-tailwindcss-0.10.1-universal
+2023-10-17 02:48:04.841 [info] Extracting extension completed. bradlc.vscode-tailwindcss
+2023-10-17 02:48:04.863 [info] Extension installed successfully: bradlc.vscode-tailwindcss
+2023-10-17 02:48:04.884 [info] Marked extension as uninstalled bradlc.vscode-tailwindcss-0.10.0-universal
+2023-10-17 02:48:04.942 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/home/martin/.vscode-oss/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/home/martin/.vscode-oss/extensions/extensions.json.vsctmp'
+    at s.create (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:51:30209)
+    at i (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:51:30329)
+    at t.fb (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:35755)
+    at t.stat (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:28201)
+    at async w.stat (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:15579)
+    at async Q.tb (/usr/lib/code/out/vs/code/node/sharedProcess/sharedProcessMain.js:109:9514)

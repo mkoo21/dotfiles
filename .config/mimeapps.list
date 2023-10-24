@@ -1,0 +1,11 @@
+[Default Applications]
+video/mp4=vlc.desktop
+video/x-matroska=vlc.desktop
+image/webp=org.gnome.Loupe.desktop
+image/png=org.gnome.Loupe.desktop
+
+[Added Associations]
+video/mp4=vlc.desktop;
+video/x-matroska=vlc.desktop;
+image/webp=org.gnome.Loupe.desktop;
+image/png=org.gnome.Loupe.desktop;

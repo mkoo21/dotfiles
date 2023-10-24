@@ -1,0 +1,43 @@
+2023-10-23 14:04:05.143 [info] Extension host with pid 85674 started
+2023-10-23 14:04:05.143 [info] Skipping acquiring lock for /home/martin/.config/Code - OSS/User/workspaceStorage/44957dfba0c10e44a0b454e31e3f49c7.
+2023-10-23 14:04:05.370 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2023-10-23 14:04:05.388 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:typescriptreact'
+2023-10-23 14:04:06.910 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2023-10-23 14:04:06.912 [info] ExtensionService#_doActivateExtension vscode.npm, startup: true, activationEvent: 'workspaceContains:package.json'
+2023-10-23 14:04:06.983 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2023-10-23 14:04:07.057 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2023-10-23 14:04:07.489 [info] Eager extensions activated
+2023-10-23 14:04:07.619 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2023-10-23 14:04:07.622 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2023-10-23 14:04:07.635 [info] ExtensionService#_doActivateExtension bradlc.vscode-tailwindcss, startup: false, activationEvent: 'onStartupFinished'
+2023-10-23 14:04:07.726 [info] ExtensionService#_doActivateExtension eamodio.gitlens, startup: false, activationEvent: 'onStartupFinished'
+2023-10-23 14:04:11.982 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+2023-10-23 15:03:31.768 [warning] TextEditor is closed/disposed
+2023-10-23 15:31:20.321 [warning] TextEditor is closed/disposed
+2023-10-23 15:31:20.526 [info] ExtensionService#_doActivateExtension vscode.extension-editing, startup: false, activationEvent: 'onLanguage:json'
+2023-10-23 15:31:20.596 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:json'
+2023-10-23 15:31:28.771 [warning] vscode.json-language-features - Code actions of kind 'quickfix 'requested but returned code action is of kind 'source.sort.json'. Code action will be dropped. Please check 'CodeActionContext.only' to only return requested code actions.
+2023-10-23 16:56:22.570 [warning] TextEditor is closed/disposed
+2023-10-23 16:57:46.360 [warning] TextEditor is closed/disposed
+2023-10-23 16:58:08.113 [warning] TextEditor is closed/disposed
+2023-10-23 16:58:08.304 [info] ExtensionService#_doActivateExtension vscode.markdown-language-features, startup: false, activationEvent: 'onLanguage:markdown'
+2023-10-23 16:58:09.052 [warning] TextEditor is closed/disposed
+2023-10-23 16:58:09.199 [warning] Illegal argument: TextEditor(vs.editor.ICodeEditor:1,$model6)
+2023-10-23 16:58:11.399 [warning] TextEditor is closed/disposed
+2023-10-23 16:58:18.089 [info] ExtensionService#_doActivateExtension vscode.markdown-math, startup: false, activationEvent: 'api', root cause: vscode.markdown-language-features
+2023-10-23 16:58:20.116 [warning] TextEditor is closed/disposed
+2023-10-23 17:04:46.346 [warning] TextEditor is closed/disposed
+2023-10-23 17:04:46.510 [error] [bradlc.vscode-tailwindcss] provider FAILED
+2023-10-23 17:04:46.511 [error] TypeError: Cannot read properties of undefined (reading 'filter')
+	at Object.<anonymous> (/home/martin/.vscode-oss/extensions/bradlc.vscode-tailwindcss-0.10.1-universal/dist/extension.js:43:14050)
+	at Generator.next (<anonymous>)
+	at s (/home/martin/.vscode-oss/extensions/bradlc.vscode-tailwindcss-0.10.1-universal/dist/extension.js:1:1247)
+2023-10-23 17:10:33.514 [warning] TextEditor is closed/disposed
+2023-10-23 17:10:35.188 [warning] TextEditor is closed/disposed
+2023-10-23 17:10:39.711 [warning] TextEditor is closed/disposed
+2023-10-23 17:10:47.848 [warning] TextEditor is closed/disposed
+2023-10-23 17:10:59.618 [warning] TextEditor is closed/disposed
+2023-10-23 17:13:06.774 [warning] TextEditor is closed/disposed
+2023-10-23 17:15:43.209 [warning] TextEditor is closed/disposed
+2023-10-23 17:15:56.695 [warning] TextEditor is closed/disposed
+2023-10-23 17:16:34.307 [warning] TextEditor is closed/disposed

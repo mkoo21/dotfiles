@@ -1,0 +1,29 @@
+[Data Source]
+DisplayName=koo.martin@gmail.com
+Enabled=true
+Parent=cf0339f8ac175a34848baa535c76383aed2a1f8c
+
+[Mail Submission]
+SentFolder=folder://local/Sent
+TransportUid=bd1893133ee30c733df0e3cb9eb8f71909eea809
+RepliesToOriginFolder=false
+UseSentFolder=true
+
+[Mail Composition]
+Bcc=
+Cc=
+DraftsFolder=folder://local/Drafts
+ReplyStyle=default
+SignImip=true
+TemplatesFolder=
+StartBottom=inconsistent
+TopSignature=inconsistent
+Language=
+
+[Mail Identity]
+Address=koo.martin@gmail.com
+Aliases=
+Name=
+Organization=
+ReplyTo=
+SignatureUid=none

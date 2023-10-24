@@ -1,0 +1,17 @@
+[Global] Creating projects: [{"folder":"/home/martin/dev/projects/frontend/boids","configPath":"/home/martin/dev/projects/frontend/boids/tailwind.config.ts","isUserConfigured":false,"documentSelector":[{"pattern":"/home/martin/dev/projects/frontend/boids/tailwind.config.ts","priority":0},{"pattern":"/home/martin/dev/projects/frontend/boids/**","priority":3}]}]
+[Global] Adding watch patterns: /home/martin/dev/projects/frontend/boids/tailwind.config.ts, /home/martin/dev/projects/frontend/boids
+[tailwind.config.ts] Initializing...
+[tailwind.config.ts] Loaded Tailwind CSS config file: /home/martin/dev/projects/frontend/boids/tailwind.config.ts
+[tailwind.config.ts] Loaded postcss v8.4.31: /home/martin/dev/projects/frontend/boids/node_modules/postcss
+[tailwind.config.ts] Loaded tailwindcss v3.3.3: /home/martin/dev/projects/frontend/boids/node_modules/tailwindcss
+[tailwind.config.ts] Building...
+----------
+RESTARTING
+----------
+[Global] Creating projects: [{"folder":"/home/martin/dev/projects/frontend/boids","configPath":"/home/martin/dev/projects/frontend/boids/tailwind.config.ts","isUserConfigured":false,"documentSelector":[{"pattern":"/home/martin/dev/projects/frontend/boids/tailwind.config.ts","priority":0},{"pattern":"/home/martin/dev/projects/frontend/boids/**","priority":3}]}]
+[Global] Adding watch patterns: /home/martin/dev/projects/frontend/boids/tailwind.config.ts, /home/martin/dev/projects/frontend/boids
+[tailwind.config.ts] Initializing...
+[tailwind.config.ts] Failed to load workspace modules.
+[tailwind.config.ts] Using bundled version of `tailwindcss`: v3.3.0
+[tailwind.config.ts] Using bundled version of `postcss`: v8.4.31
+[tailwind.config.ts] Building...

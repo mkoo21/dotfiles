@@ -1,0 +1,17 @@
+2023-10-19 08:17:40.662 [info] Extension host with pid 112197 started
+2023-10-19 08:17:40.662 [info] Skipping acquiring lock for /home/martin/.config/Code - OSS/User/workspaceStorage/44957dfba0c10e44a0b454e31e3f49c7.
+2023-10-19 08:17:41.120 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2023-10-19 08:17:41.141 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:typescriptreact'
+2023-10-19 08:17:42.811 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2023-10-19 08:17:42.825 [info] ExtensionService#_doActivateExtension vscode.npm, startup: true, activationEvent: 'workspaceContains:package.json'
+2023-10-19 08:17:42.933 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2023-10-19 08:17:43.053 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2023-10-19 08:17:44.110 [info] Eager extensions activated
+2023-10-19 08:17:44.446 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2023-10-19 08:17:44.450 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2023-10-19 08:17:44.463 [info] ExtensionService#_doActivateExtension bradlc.vscode-tailwindcss, startup: false, activationEvent: 'onStartupFinished'
+2023-10-19 08:17:44.913 [info] ExtensionService#_doActivateExtension eamodio.gitlens, startup: false, activationEvent: 'onStartupFinished'
+2023-10-19 08:17:46.352 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+2023-10-19 08:27:19.190 [warning] TextEditor is closed/disposed
+2023-10-19 08:27:25.049 [warning] TextEditor is closed/disposed
+2023-10-19 08:57:17.982 [warning] TextEditor is closed/disposed

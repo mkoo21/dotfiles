@@ -1,0 +1,5 @@
+2023-10-17 02:47:57.133 [info] update#setState disabled
+2023-10-17 02:47:57.155 [info] update#ctor - updates are disabled as there is no update URL
+2023-10-17 04:15:06.939 [error] CodeWindow: detected unresponsive
+2023-10-17 06:58:43.626 [error] [UtilityProcess id: 1, type: fileWatcher, pid: 56949]: crashed with code 15 and reason 'killed'
+2023-10-17 06:58:43.663 [info] Extension host with pid 56947 exited with code: 0, signal: unknown.
