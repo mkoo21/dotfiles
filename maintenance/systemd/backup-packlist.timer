@@ -1,0 +1,10 @@
+[Unit]
+Description=Write list of packages to a file for backup/restoration
+
+[Timer]
+Unit=backup-packlist.service
+OnCalendar=daily
+Peristent=True
+
+[Install]
+WantedBy=timers.target

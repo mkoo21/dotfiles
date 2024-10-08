@@ -1,0 +1,28 @@
+#!/usr/bin/zsh
+
+if [ "$EUID" -ne 0 ]; then
+    echo "Please run as root"
+    exit 1
+fi
+
+START=$PWD
+USER=martin
+HOME=/home/$USER
+cd $HOME
+
+# clone dotfiles
+if [ ! -e $HOME/dotfiles ]; then
+    git clone git@github.com:mkoo21/dotfiles.git
+fi
+
+# install package list
+pacman -S - < $HOME/dotfiles/maintenance/packlist.txt
+ln -s $HOME/dotfiles/.zshrc $HOME/.zshrc
+
+# add systemd services/timers
+cp $HOME/dotfiles/maintenance/systemd/* /etc/systemd/system
+
+# change shell (probably need to do this as user too)
+chsh
+
+cd $START

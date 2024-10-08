@@ -1,0 +1,10 @@
+[Unit]
+Description=Write list of packages to a file for backup/restoration
+
+[Service]
+Type=oneshot
+ExecStart=/home/martin/maintenance/scripts/packlist.sh
+
+[Install]
+WantedBy=multi-user.target
+
