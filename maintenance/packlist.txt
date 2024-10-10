@@ -269,6 +269,8 @@ jemalloc
 js128
 json-c
 json-glib
+k6
+k6-debug
 kbd
 keyutils
 kmod
