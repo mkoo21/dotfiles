@@ -116,3 +116,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # allow pyenv to manage global python version
 eval "$(pyenv init -)"
+
+# Created by `pipx` on 2024-06-26 21:04:32
+export PATH="$PATH:/home/martin/.local/bin"
