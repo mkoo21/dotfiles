@@ -1,0 +1,10 @@
+[Unit]
+Description=Rsync docker volumes to a remote called "gdrive" that should be preconfigured
+
+[Timer]
+Unit=backup-docker-volumes.service
+OnCalendar=daily
+Peristent=True
+
+[Install]
+WantedBy=timers.target

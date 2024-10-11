@@ -1,0 +1,10 @@
+[Unit]
+Description=Rsync docker volumes to a remote called "gdrive" that should be preconfigured
+
+[Service]
+Type=oneshot
+ExecStart=/home/martin/dotfiles/maintenance/scripts/backup-docker-volumes.sh
+
+[Install]
+WantedBy=multi-user.target
+
