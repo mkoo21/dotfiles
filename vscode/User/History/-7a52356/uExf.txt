@@ -1,0 +1,100 @@
+Hi! I'm your PayPal Assistant. To get started, simply ask me a question.
+
+I am still learning, so if I can't help you, I'll direct you to additional resources.
+
+I need a human to review my case
+Would you like to send this conversation to a customer support agent? We typically respond within a few hours.
+
+Yes
+If you haven't already, let us know why you're contacting us. Feel free to step away and we'll notify you by email or push notification when we've responded.
+
+I need a human to review my case, not an "AI"
+We received your request. An agent will respond shortly.
+That's number one. Second, I need to remove my banking information from Paypal, but Paypal's UI is broken. Third, I need to close my Paypal account. I understand Paypal doesn't want to do the latter two, but if Paypal doesn't I will ask my bank to terminate the agreement and log a complaint with the Financial Consumer Agency regarding Paypal's conduct.
+Hi Martin, my name is Sakthi. I'm your live representative. I will review your account to resolve your concern, and this may take some time. Meanwhile, please do not Disconnect/End this message.
+
+Aug 6, 2024 9:16 AM
+I'm genuinely sorry to hear about the frustration and concern you're experiencing with the dispute case. I completely understand the seriousness of the issue.
+
+After a thorough review, our team has validated the document provided for dispute case #PP-R-XOV-*********, involving $284.00 USD against Soumyasree Gupta, and concluded that the service was delivered to you. Unfortunately, the claim issue is not significant, and it is not covered by Purchase Protection and needs to be resolved directly with the seller, which is why the case was denied. I understand this might be disappointing, and I’m truly sorry for any inconvenience this has caused.
+
+If you’re unable to reach a resolution with the seller, there are other options available to help you recover the funds.
+
+1) Kindly contact your bank/card processor x-3461 and request them to file a "Chargeback" case.
+
+2)After filing, they will contact PayPal to work with them to resolve the case. PayPal will work together with your bank/card processor to make sure the case is resolved in your favor.
+
+3) All updates on PayPal's actions will be communicated to you via email. As the bank conducts the primary investigation, their decision will be final.
+
+Regarding your second concern, you can remove your banking information from PayPal by following the below steps:
+
+Here’s how to remove your bank account:
+
+Go to your Wallet.
+Click the bank you want to remove.
+Click Remove bank.
+Here’s how to remove a card from your PayPal account:
+
+Go to your Wallet.
+Click the card you want to remove.
+Click Remove card.
+You may not be able to remove a card or bank if there's a pending transaction, or if your card was used as the backup payment method for a recent payment. In such cases, kindly cancel your pre-approved payments with your seller before removing your financial from PayPal.
+
+I'm sorry to hear you're considering closing your PayPal account. 
+
+We value you as a customer, and we ask that you carefully consider your decision. Keeping your account open has no fees, so if there's a chance you might use PayPal in the future, it's wise to keep it open.
+
+It's essential to note that once closed, the account cannot be reopened, and all records will be deleted. If you're still considering closing your account, here's the steps to close account: https://www.paypal.com/us/cshelp/article/how-do-i-close-my-paypal-account-help247  
+
+Feel free to reply when you're ready; please note this is not a live message, so delays in responses are expected.
+
+Aug 6, 2024 9:53 AM
+Did you not read the case? It was not an "item not received" case, it was an "item not described." The seller only showed that they provided *something.* That something was, measurably, about 2.5% of what they advertised. Thank you for verifying that a human did not review the case, nor did anyone read the mountain of evidence I provided.
+We received your request. An agent will respond shortly.
+Yes, I tried to remove the payment information using the method you described. Paypal's UI won't let me do it. Is Paypal a scam, too?
+What is and isn't covered by purchase protection? Why provide the option to open the dispute at all? It's a random private individual with a gmail account and a fake company.
+If Paypal does business with such sellers I must conclude Paypal is not a reputable payment processor. Remove my banking information and close my account.
+Aug 6, 2024 9:58 AM
+Paypal hit my account with a pre-authorized debit. Are you sure your "chargeback" information is correct?
+Aug 6, 2024 10:05 AM
+Martin, I’ve reviewed the details of your case, and the dedicated team has concluded that the claim is not significant and hence denied your case.
+
+If you're not satisfied with the quality of the curriculum materials, you'll need to work out with the seller here because PayPal’s Purchase Protection program may apply when you encounter these specific problems with a transaction:
+
+You didn’t receive your item from a seller (referred to as an “Item Not Received” claim), or
+You received an item, but the item isn’t what you ordered (referred to as a “Significantly Not as Described” claim).
+I understand that this outcome may not align with your expectations, and the decision made at the conclusion of a claim is usually final. It can only be appealed if new information is presented.
+
+If you’d like to appeal the outcome of a claim, you can do so in the Resolution Center within 10 days of the case closure.  Here’s how to appeal the decision of a case:
+ 
+
+   1. Go to the Resolution Center.
+    2. Click Report a Problem.    
+    3. Select Closed cases in the drop-down menu and find the claim you want to appeal.    
+    4. Click Appeal in the action column. 
+
+May I know the details of your pre-authorized debit which you're referring to?
+
+Respond whenever you're ready, and we'll reply as soon as possible. 
+
+Aug 6, 2024 9:17 PM
+It was a "not as described" claim. There was no option for "significantly not as described." The notes made on the dispute indicate Paypal treated it as a "item not received" claim. You treated it as the wrong kind of claim, unless you're telling me that in Paypal English "not as described" translates more closely to "not received" than "significantly not as described?"
+Here's some "new" information that you clearly missed - the item was significantly not as described!
+Now give me the option to appeal the case and please have a human review it. There is no human that needs a week to "review" three WhatsApp screenshots and then misunderstand the claim type.
+And then close my account. Are you aware this scammer only accepts payment via Paypal? She knows what she's doing. Paypal is clearly not a reputable company, and not being able to make payments over Paypal will work out to my advantage.
+The "pre-authorized" debit is the charge paypal made to my connected bank that I cannot remove! What more details do you need?
+I will continue the complaint process with my bank and the FCAC
+Aug 6, 2024 9:23 PM
+I'm not complaining about the curriculum. They advertised it as a *** hour TEFL course with a college in London. The product they sold is not TEFL, they are not a college, and they have no connection to London. Do you think "120 hours" is a brand name or something?
+Or is the fact that the seller was the one who escalated to a claim within the first few hours relevant? Was she the one who said it was a "item not received" claim, and did Paypal investigate her claim rather than mine?
+You made a mistake with the claim type, the note on the claim shows that you made a mistake, and what you're saying here shows you made a mistake with the claim type. Do you think scammers "work with" their customers?
+Aug 6, 2024 9:30 PM
+The entire time through the claim process Paypal was saying I would be contacted for more information if necessary. No such attempt was made. I am inclined to go with the balance of evidence here, as well as with the scammer you are working with. Unlink my bank and close my account. Your app does not allow me to do that myself, and I will be including that fact in my complaint.
+Aug 6, 2024 9:36 PM
+Can you explain to me, in writing, why you are pretending I made a different type of claim than the one I made, and why you are pretending I did not ask to close my account?
+A file has been uploaded
+Screenshot fr ... 8-47.png / 0.02 MB
+Explain this error, and why I should not interpret this as Paypal being a scam company.
+A file has been uploaded
+Screenshot fr ... 0-01.png / 0.03 MB
+Explain this error and why I should not interpret this as Paypal being a scam company.

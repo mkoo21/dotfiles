@@ -1,0 +1,7 @@
+#!/usr/bin/zsh
+
+if [ ! -e $HOME/dotfiles ]; then
+    
+fi
+
+ln -s $HOME/dotfiles/.zshrc $HOME/.zshrc

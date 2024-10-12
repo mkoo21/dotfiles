@@ -1,0 +1,511 @@
+Delivered-To: koo.martin@gmail.com
+Received: by 2002:a05:7300:54c7:b0:12f:1c14:fd6 with SMTP id t7csp190563dyi;
+        Thu, 18 Jul 2024 00:13:32 -0700 (PDT)
+X-Forwarded-Encrypted: i=3; AJvYcCVtR+QIpjBmoljvI1X62a6pSsWGR0/WB1Rur96cwZwbcoBdKarmPP2my7zQr3VQxeRjYNpxMiSDyaXo3IaYaIL5mRJpGw==
+X-Google-Smtp-Source: AGHT+IFHJlmOU7Dy8ivt49Mda/uCYWwraFpFgLT5Ii4wGwX2MwF6vabD1AmOsy74jG7N/ASvW3qZ
+X-Received: by 2002:a05:6000:144d:b0:360:872b:7e03 with SMTP id ffacd0b85a97d-36831141debmr1846496f8f.0.1721286811899;
+        Thu, 18 Jul 2024 00:13:31 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1721286811; cv=pass;
+        d=google.com; s=arc-20160816;
+        b=RPN20V5w5VunpIiqRH0YBzfWzrxvP1QqzwU68gAu4wSqJptcZOxoek81GN8q4l27Ql
+         0xHgZUwYvifbcy35vGU6ANqLdITU6BbjyWpqn+PEg3l0e9DsoWUCoxSMqJFHS0kdPMM5
+         A4TBC6uoQ7W/dcBUKwY9FhxWGd3WadvfjOrB6KZEA/jreIPc90+BUwUaAN7cctWuYqBE
+         RNRXDjjg4Lii6HRc/KIdUX/tW1+BgXJPE/syNZq2IBLPNXtt+BVMVGkXsRC3uiX4iQVZ
+         XTWTjQl0lWhFyC4cCwrLGFSY+U1NdJmvoicdFOHUVOPMH2fxKL/0+KqerJV4HlR1C65m
+         Wj2g==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature:dkim-signature;
+        bh=DPUzurqJjNWSlTWMgyW43oXXxtpewsmamqmj5D5h62Q=;
+        fh=ncpaKgZWML9hc2nNBKUCh02pYa3uU3WW09XbBm7hdKo=;
+        b=s69mxc46sD5v+fmiIG3nUAC6k2nxBLaCjJzzYF3aT1pEd2bJ7i4OFozO9dt+Si5DUH
+         VM+nRTaEggcKOhNuM4I4V6m2XsPP40JhprX8NAp1p1mkhDPp/tQmpEKYe1zS+z6l/ydq
+         BaSxTBKj+ogBWj5x5ZoG8aH+CDoM9BjnDdq5iCRN1j3gBkerfkPDFwpKRoRcQV1wMsqX
+         l2z/e0no9AyctwZJ4tbXYx7S9Tgvs1AHoQNhWCXKJeoLEi765Vj+BjDFU0MyzNg2Nb+i
+         R8GPUNdRAR92GNtYgCxcD6E8NUmb3/R2jTUUIFtoyYQXYoon8uvsORR1OnnqVm7eKKBh
+         fxSw==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@cloudflare-email.net header.s=2023 header.b=h1HYEcAW;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=Dfk2GfD1;
+       arc=pass (i=1 spf=pass spfdomain=gmail.com dkim=pass dkdomain=gmail.com dmarc=pass fromdomain=gmail.com);
+       spf=pass (google.com: domain of srs0=y1xm=so=gmail.com=tutorlct19@martin-is-awesome.win designates 104.30.8.27 as permitted sender) smtp.mailfrom="SRS0=Y1xm=so=gmail.com=tutorlct19@martin-is-awesome.win";
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <SRS0=Y1xm=so=gmail.com=tutorlct19@martin-is-awesome.win>
+Received: from i-ch.cloudflare-email.net (i-ch.cloudflare-email.net. [104.30.8.27])
+        by mx.google.com with ESMTPS id ffacd0b85a97d-36855824002si292300f8f.389.2024.07.18.00.13.31
+        for <koo.martin@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Thu, 18 Jul 2024 00:13:31 -0700 (PDT)
+Received-SPF: pass (google.com: domain of srs0=y1xm=so=gmail.com=tutorlct19@martin-is-awesome.win designates 104.30.8.27 as permitted sender) client-ip=104.30.8.27;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@cloudflare-email.net header.s=2023 header.b=h1HYEcAW;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=Dfk2GfD1;
+       arc=pass (i=1 spf=pass spfdomain=gmail.com dkim=pass dkdomain=gmail.com dmarc=pass fromdomain=gmail.com);
+       spf=pass (google.com: domain of srs0=y1xm=so=gmail.com=tutorlct19@martin-is-awesome.win designates 104.30.8.27 as permitted sender) smtp.mailfrom="SRS0=Y1xm=so=gmail.com=tutorlct19@martin-is-awesome.win";
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; s=2023; d=cloudflare-email.net; c=relaxed/relaxed;
+	h=To:Subject:Date:From:In-Reply-To:References:reply-to:cc:resent-date
+	:resent-from:resent-to:resent-cc:list-id:list-help:list-unsubscribe
+	:list-subscribe:list-post:list-owner:list-archive; t=1721286811;
+	x=1721891611; bh=DPUzurqJjNWSlTWMgyW43oXXxtpewsmamqmj5D5h62Q=; b=h1HYEcAWf/
+	enVbq2n7Bt3H5FrRMLbnrrQnuiWA8xl49UICp7qQPZmRolrIfHKmyRzmRgyoI19Jnznddjk0F6u
+	VHtLn/yVzB7MiJ9Tu94WM/eRj3YizGiaH9/zfaM69Ligx4ORC1sqKtCRL48cOBC0NB6uWDBWWND
+	Q5Lq6ygPEaPxlQb2P6MJ34p4tso08mHmLXzoTy6lEuSAsx/HBRtbjZgjZGAfQCHAfJgwhQJVgI/
+	rLKjGRp1UWmKfTtTcYpfY2V6LqDRXAGNTxNeIBrS0A061cZZnOsOefpmy6qtks6InQX3sGiOLNS
+	EWH6o8F2DfBwoeZXTEd9420nvImNMoyA==;
+X-Forwarded-To: koo.martin@gmail.com
+X-Forwarded-For: martin@martin-is-awesome.win koo.martin@gmail.com
+Received: from mail-wm1-x335.google.com (2a00:1450:4864:20::335)
+        by cloudflare-email.net (unknown) id Qs59kG7fpr1e
+        for <martin@martin-is-awesome.win>; Thu, 18 Jul 2024 07:13:30 +0000
+ARC-Seal: i=1; a=rsa-sha256; s=2023; d=cloudflare-email.net; cv=none;
+	b=l3wW/CkZjp7o0LjCuDMtext1e2784Lqi74v3ZNsiGrjldLBAHxi5kNoQts4xWry2s9/66mETq
+	G+MxJ97dmcAOeb7dTTq00j7ktvcGJcbr0fNpuPVufudVNU+aIBetzT3R+Nz3hPL7qteHUQUuhvI
+	BzI1bKBFnsU+KKzZqjOXBoJ+NqngufdqJ0xA6oIaVyd6sHYC4kDTyk3QE+is2ZJ4W4tM9WFtdIv
+	3olb1QBgFWKQvzzjTf4abEFCK37EsYXp21CYSeLKrJjB9BOXgMC9j08YxqOJj6bNQb3m20jQ1VG
+	291oE6IoHGPG3whAumL35LHXeUcOFPIIjQ++gn8taugA==;
+ARC-Message-Signature: i=1; a=rsa-sha256; s=2023; d=cloudflare-email.net; c=relaxed/relaxed;
+	h=To:Subject:Date:From:In-Reply-To:References:reply-to:cc:resent-date
+	:resent-from:resent-to:resent-cc:list-id:list-help:list-unsubscribe
+	:list-subscribe:list-post:list-owner:list-archive; t=1721286811;
+	x=1721891611; bh=DPUzurqJjNWSlTWMgyW43oXXxtpewsmamqmj5D5h62Q=; b=m6SU+Unm1A
+	LNq18DnHbrkP0eNmFQxafg4CuWp6aab7E7On4OvgkabVhxj7Y1bYfp0/4LiMoE09EY6N+wqeQCS
+	cD5A95+LKSBKyDsKeZY4oi3/j/P30PrbA+Lb1Tk9eOlzgmVVetQzreKJSsFjXChP81tAin4V4Et
+	U9NXi0wXp1DGGGMwh+40pS11wUn2NMGq7Ue28t2jfX1wAGg29rCh68fHtLPDj/olgE6GRlfpQ4q
+	WfOXTQoM6ETmcygUlOfW9/yuWUZ0VQaewsolNPzf5iPPy7ZbESL8VI8J+jTTlwIm+NhvkjzLeIB
+	nLCfPyJj/J6jwcIPC5YWxiUHwjrtpq9Q==;
+ARC-Authentication-Results: i=1; mx.cloudflare.net;
+	dkim=pass header.d=gmail.com header.s=20230601 header.b=Dfk2GfD1;
+	dmarc=pass header.from=gmail.com policy.dmarc=none;
+	spf=none (mx.cloudflare.net: no SPF records found for postmaster@mail-wm1-x335.google.com) smtp.helo=mail-wm1-x335.google.com;
+	spf=pass (mx.cloudflare.net: domain of tutorlct19@gmail.com designates 2a00:1450:4864:20::335 as permitted sender) smtp.mailfrom=tutorlct19@gmail.com;
+	arc=none smtp.remote-ip=2a00:1450:4864:20::335
+Received-SPF: pass (mx.cloudflare.net: domain of tutorlct19@gmail.com designates 2a00:1450:4864:20::335 as permitted sender)
+	receiver=mx.cloudflare.net; client-ip=2a00:1450:4864:20::335; envelope-from="tutorlct19@gmail.com"; helo=mail-wm1-x335.google.com;
+Authentication-Results: mx.cloudflare.net;
+	dkim=pass header.d=gmail.com header.s=20230601 header.b=Dfk2GfD1;
+	dmarc=pass header.from=gmail.com policy.dmarc=none;
+	spf=none (mx.cloudflare.net: no SPF records found for postmaster@mail-wm1-x335.google.com) smtp.helo=mail-wm1-x335.google.com;
+	spf=pass (mx.cloudflare.net: domain of tutorlct19@gmail.com designates 2a00:1450:4864:20::335 as permitted sender) smtp.mailfrom=tutorlct19@gmail.com;
+	arc=none smtp.remote-ip=2a00:1450:4864:20::335
+Received: by mail-wm1-x335.google.com with SMTP id 5b1f17b1804b1-4279c924ca7so3290955e9.2
+        for <martin@martin-is-awesome.win>; Thu, 18 Jul 2024 00:13:30 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1721286810; x=1721891610; darn=martin-is-awesome.win;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=DPUzurqJjNWSlTWMgyW43oXXxtpewsmamqmj5D5h62Q=;
+        b=Dfk2GfD1qBU2fgJxWhveIyXzWSH2dhwoR+q4hEsjD/D5riaFJ7BeDpJrbTOQtza9VS
+         3fmesq3VLDexfco6OQBNOS0zMmFNqvGzSl/X6MyKeGyRVHLFu0Ct5/K/HjZOKZ6oop7T
+         upymb4tELsTJ29mGNZyDYBDZJuUM6GUK21YBOvKJ1QQjhxDkq6sJ2v6VXp7P83fnRo/4
+         2FTC8BgOmL4sF6KlMqNltN+jQlmIc+mBfNTi2kSTLK32VgEkmtxrYf/nrg1cqlwXKZSE
+         /pkRqxCX2hHcsQrR33vFYZ8sm79bKCT8TjcPjRF6R9kEVxraNmaPtN/mRCUfuQ2vFIT3
+         gl/g==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1721286810; x=1721891610;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=DPUzurqJjNWSlTWMgyW43oXXxtpewsmamqmj5D5h62Q=;
+        b=IUzBmLfLkvkWfEn6gQxKLCjuKhUdeiefirXsR6Hcciof34cFm6hh6LO6xtKrU7T48b
+         z8k++TRjQogMSJPA6IzHCpUuW/IFnXXdz3AuM1dNpuR0fWD9AoxGR6zgWBXXrwvoVEaX
+         J7hkIt3zOfNyDCVIaIeKHS5mbqt9dC98Ch/MOVeS5Pn4cGPGIGXiwnk0eTqLajslz0CA
+         HnIs6yiAFfCtPo8YJXnaPcsM8oOoFAOJOcp9PZ+12kXYGY5HnyiAhh9MGy+mUUdETDeD
+         tPDgYy5M+YWG84OHBs7II9p2xueezkCTVq4NMy6GmL8a7Xcen0n5xa/oYVjTNEAp7SAv
+         Bzsw==
+X-Gm-Message-State: AOJu0YyAB9gwGPSQgbNTSbF/EOwHw4e7e8WN/zd9T0A6FpZ8M/NzFJGj
+	m5IwyUSa0VvTfgFePXShFYbPVAMNzsyZrJZTL7wrcXbn3iYnI/J5MTA+mj/jU7KEiLSXFyWsk+p
+	0EyEHLp/9Nn9BeMlC6J+pshjSmzT9lvGW
+X-Received: by 2002:a5d:6e05:0:b0:368:3079:4282 with SMTP id
+ ffacd0b85a97d-368315f2d58mr2105894f8f.11.1721286810120; Thu, 18 Jul 2024
+ 00:13:30 -0700 (PDT)
+MIME-Version: 1.0
+References: <CA+_M0Oe9QHwoW4hr79T4E6dGQBRNFeZn9qTFyg8+rFzNybiJsg@mail.gmail.com>
+ <CAG8eWCmKF2c4wZLQksbXvfOKPLFuqyAT6bza-25OiAx-30yNoQ@mail.gmail.com>
+ <CA+_M0OcikVsWZ1F2A+1+FdPA+zYp+v+3qc94DtG7+EA_qBmbfQ@mail.gmail.com> <CAG8eWCmkzg4cJO_u7+mhf73soztfhFT+OuQnTXWPBvOmvbXQdA@mail.gmail.com>
+In-Reply-To: <CAG8eWCmkzg4cJO_u7+mhf73soztfhFT+OuQnTXWPBvOmvbXQdA@mail.gmail.com>
+From: Tutor Support Lct <tutorlct19@gmail.com>
+Date: Thu, 18 Jul 2024 12:43:18 +0530
+Message-ID: <CA+_M0Oe9L9qaUjP9ivnYdM+WczkvwKJ7-eeGssquMtRmrrBX8g@mail.gmail.com>
+Subject: Re: 120 hours International Online TEFL course
+To: Martin Koo <martin@martin-is-awesome.win>
+Content-Type: multipart/alternative; boundary="000000000000dfbed0061d80503c"
+
+--000000000000dfbed0061d80503c
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Dear Martin,
+
+Please note that after submission within 48 hours, you will get access to
+the next module.
+
+*Tutor Support/LMS*
+
+*London College of Teachers and Trainers*
+UK toll free: +44 808 271 1535
+Email: t <lctaccess19@gmail.com>utorlct19@gmail.com
+www.londoncollegeofteachers.com
+<https://www.londoncollegeofteachers.com/index.php>
+http://www.londoncollegeofteachers.uk/
+http://www.londoncollegeofteacher.com/
+https://www.londoncollegeofteachers.com/index.php
+
+
+
+
+[image: Chattered College of Teaching]
+[image: Intern Reviews | International Internships | CRCC Asia]
+
+
+On Wed, Jul 17, 2024 at 5:16=E2=80=AFPM Martin Koo <martin@martin-is-awesom=
+e.win>
+wrote:
+
+> There are bullet points in the list of rules you gave me that mention "th=
+e
+> access would be given as per the schedule discussed" and "Strictly
+> maintain the course duration as mentioned. In case of delay, additional
+> charges will be levied" that were not mentioned on the materials
+> advertising the course.
+>
+> But is this going to be the process for all 120 hours? I submit a module
+> and wait for someone to approve me to move to the next one?
+>
+>
+>
+> On Wed, 17 Jul 2024 at 03:04, Tutor Support Lct <tutorlct19@gmail.com>
+> wrote:
+>
+>> There isn't any time frame for the course.
+>>
+>> *Tutor Support/LMS*
+>>
+>> *London College of Teachers and Trainers*
+>> UK toll free: +44 808 271 1535
+>> Email: t <lctaccess19@gmail.com>utorlct19@gmail.com
+>> www.londoncollegeofteachers.com
+>> <https://www.londoncollegeofteachers.com/index.php>
+>> http://www.londoncollegeofteachers.uk/
+>> http://www.londoncollegeofteacher.com/
+>> https://www.londoncollegeofteachers.com/index.php
+>>
+>>
+>>
+>>
+>> [image: Chattered College of Teaching]
+>> [image: Intern Reviews | International Internships | CRCC Asia]
+>>
+>>
+>> On Wed, Jul 17, 2024 at 9:01=E2=80=AFAM Martin Koo <martin@martin-is-awe=
+some.win>
+>> wrote:
+>>
+>>> Sorry, what is "the schedule discussed?" The page I bought the course
+>>> from says it is a self-paced online course, with no mention of modules
+>>> being time-gated.
+>>>
+>>> On Mon, 15 Jul 2024 at 03:31, Tutor Support Lct <tutorlct19@gmail.com>
+>>> wrote:
+>>>
+>>>> Dear Martin,
+>>>>
+>>>> We welcome you to our globally reputed and internationally accredited
+>>>> teacher training institute. Our journey with our students starts once =
+they
+>>>> sign up for any course and it continues for a lifetime.
+>>>>
+>>>> To prepare our students, we have chosen a program with an active
+>>>> self-learning approach. This course promises to be full of learning
+>>>> opportunities.
+>>>>
+>>>> As your tutor, I am looking forward to being part of your academic
+>>>> progress.
+>>>>
+>>>> =E2=9C=92 Before proceeding, please go through the Course Rules and Pr=
+ocedure
+>>>>
+>>>>    - Kindly save your credentials.
+>>>>    - Access to the first module has already been given.
+>>>>    - After you go through the module you can make an appointment for a
+>>>>    doubt-clearing session.
+>>>>    - After submission your score will be reflected along with the
+>>>>    correct answer key.
+>>>>    - 40 % is the cut-off to move to the next module.
+>>>>    - The access would be given as per the schedule discussed.
+>>>>    - Please maintain your registered email address for any kind of
+>>>>    communication or submission of your assignments.
+>>>>    - PLEASE MAINTAIN THE REGISTERED EMAIL ADDRESS FOR SUBMITTING YOUR
+>>>>    ASSIGNMENTS OTHERWISE IT WILL BE REJECTED.
+>>>>    - *Strictly maintain the course duration as mentioned. In case of
+>>>>    delay, additional charges will be levied. *
+>>>>
+>>>> I hope to build a strong relationship as I work with you to ensure you=
+r
+>>>> success. Please feel free to contact me for further queries.
+>>>>
+>>>> Stay Safe and Healthy!
+>>>>
+>>>>
+>>>> *Tutor Support/LMS*
+>>>>
+>>>> *London College of Teachers and Trainers*
+>>>> UK toll free: +44 808 271 1535
+>>>> Email: t <lctaccess19@gmail.com>utorlct19@gmail.com
+>>>> www.londoncollegeofteachers.com
+>>>> <https://www.londoncollegeofteachers.com/index.php>
+>>>> http://www.londoncollegeofteachers.uk/
+>>>> http://www.londoncollegeofteacher.com/
+>>>> https://www.londoncollegeofteachers.com/index.php
+>>>>
+>>>>
+>>>>
+>>>>
+>>>> [image: Chattered College of Teaching]
+>>>> [image: Intern Reviews | International Internships | CRCC Asia]
+>>>>
+>>>
+
+--000000000000dfbed0061d80503c
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Dear=C2=A0Martin,<div><br></div><div>Please note that afte=
+r submission within 48 hours, you will get access to the next module.=C2=A0=
+</div><div><br clear=3D"all"><div><div dir=3D"ltr" class=3D"gmail_signature=
+" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><div dir=3D"ltr"><div=
+ dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div><div d=
+ir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div><font face=3D"trebuchet m=
+s, sans-serif" size=3D"1"><b>Tutor Support/LMS</b></font></div><div style=
+=3D"font-family:Roboto,RobotoDraft,Helvetica,Arial,sans-serif"><div dir=3D"=
+ltr"><font size=3D"1"><img width=3D"96" height=3D"96" src=3D"https://ci3.go=
+ogleusercontent.com/mail-sig/AIorK4yUXdJqH8WNlkc0aRuRc6Ux0ltp8pFOH8rIfjfR8x=
+pOjPqxhazU5psf4LobJHEwrvBHrRtQQzM"><br></font></div></div></div></div></div=
+></div><div style=3D"font-family:Roboto,RobotoDraft,Helvetica,Arial,sans-se=
+rif"><b><font size=3D"1">London College of Teachers and Trainers</font></b>=
+</div><div style=3D"font-family:Roboto,RobotoDraft,Helvetica,Arial,sans-ser=
+if"><font size=3D"1">UK toll free: +44 808 271 1535<span style=3D"color:rgb=
+(50,50,50);font-family:&quot;Open Sans&quot;,sans-serif;text-align:center">=
+<br></span></font></div><div><div style=3D"font-family:&quot;trebuchet ms&q=
+uot;,sans-serif"><font size=3D"1"><span style=3D"font-family:Arial,Helvetic=
+a,sans-serif">Email:=C2=A0</span><a href=3D"mailto:lctaccess19@gmail.com" s=
+tyle=3D"color:rgb(17,85,204);font-family:Arial,Helvetica,sans-serif" target=
+=3D"_blank">t</a><a href=3D"mailto:utorlct19@gmail.com" target=3D"_blank">u=
+torlct19@gmail.com</a></font></div><div style=3D"font-family:&quot;trebuche=
+t ms&quot;,sans-serif"><font size=3D"1" style=3D"color:rgb(17,85,204);font-=
+family:Arial,Helvetica,sans-serif"><a href=3D"https://www.londoncollegeofte=
+achers.com/index.php" style=3D"color:rgb(17,85,204);font-family:Arial,Helve=
+tica,sans-serif" target=3D"_blank">www.londoncollegeofteachers.com</a></fon=
+t></div><div><font face=3D"trebuchet ms, sans-serif"><a href=3D"http://www.=
+londoncollegeofteachers.uk/" target=3D"_blank">http://www.londoncollegeofte=
+achers.uk/</a></font><br></div><div><font face=3D"trebuchet ms, sans-serif"=
+><a href=3D"http://www.londoncollegeofteacher.com/" target=3D"_blank">http:=
+//www.londoncollegeofteacher.com/</a><br></font></div><div><a href=3D"https=
+://www.londoncollegeofteachers.com/index.php" target=3D"_blank">https://www=
+.londoncollegeofteachers.com/index.php</a><br></div><div><br></div><div><br=
+></div><div><br></div><div><font face=3D"trebuchet ms, sans-serif"><br></fo=
+nt></div><div style=3D"font-family:&quot;trebuchet ms&quot;,sans-serif"><di=
+v style=3D"margin:0px;padding:0px 0px 20px;width:864px;font-family:Roboto,R=
+obotoDraft,Helvetica,Arial,sans-serif"><div style=3D"margin:8px 0px 0px;pad=
+ding:0px"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div style=3D"=
+margin:0px;padding:0px 0px 20px;width:825.653px;font-family:Roboto,RobotoDr=
+aft,Helvetica,Arial,sans-serif"><div style=3D"margin:8px 0px 0px;padding:0p=
+x"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div=
+ dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D=
+"ltr"><div dir=3D"ltr"><div style=3D"font-family:&quot;trebuchet ms&quot;,s=
+ans-serif"><font size=3D"1"><img width=3D"96" height=3D"62" alt=3D"Chattere=
+d College of Teaching" src=3D"https://www.londoncollegeofteachers.com/asset=
+s/images/accre-college-of-teachers.png" style=3D"font-family:Arial,Helvetic=
+a,sans-serif"></font></div><div style=3D"font-family:&quot;trebuchet ms&quo=
+t;,sans-serif"><div></div><div><font size=3D"1"><img src=3D"https://www.crc=
+casia.com/wp-content/uploads/2019/02/50746343_285420495432710_4468992821008=
+793600_n.png" alt=3D"Intern Reviews | International Internships | CRCC Asia=
+" width=3D"96" height=3D"34">=C2=A0<img width=3D"96" height=3D"56" src=3D"h=
+ttps://ci3.googleusercontent.com/mail-sig/AIorK4zOjNi2U9syqtr-703tn3iiSJADf=
+2rR581VnZosy2uThOntqfQUK0qBgj2dfT-WSgdrQk8-Bdc"></font><br></div></div></di=
+v></div></div></div></div></div></div></div></div></div><div style=3D"font-=
+size:medium"></div></div><div style=3D"font-size:medium"></div></div></div>=
+</div></div><div style=3D"font-size:medium"></div></div><div style=3D"font-=
+size:medium"></div></div></div></div></div></div></div></div></div></div></=
+div></div><br></div></div><br><div class=3D"gmail_quote"><div dir=3D"ltr" c=
+lass=3D"gmail_attr">On Wed, Jul 17, 2024 at 5:16=E2=80=AFPM Martin Koo &lt;=
+martin@martin-is-awesome.win&gt; wrote:<br></div><blockquote class=3D"gmail=
+_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204=
+,204);padding-left:1ex"><div dir=3D"ltr">There are bullet points in the lis=
+t of rules you gave me that mention &quot;t<span style=3D"font-size:12.8px"=
+>he access would be given as per the schedule discussed&quot; and &quot;</s=
+pan><span style=3D"font-size:12.8px;font-family:arial,helvetica,sans-serif"=
+>Strictly maintain the=C2=A0course=C2=A0duration as mentioned. In case of d=
+elay, additional charges will be levied&quot; that were not mentioned on th=
+e materials advertising the course.=C2=A0</span><div><font face=3D"arial, h=
+elvetica, sans-serif"><span style=3D"font-size:12.8px"><br></span></font></=
+div><div><font face=3D"arial, helvetica, sans-serif"><span style=3D"font-si=
+ze:12.8px">But is this going to be the process for all 120 hours? I submit =
+a module and wait for someone to approve me to move to the next one?=C2=A0<=
+br></span></font><span style=3D"font-size:12.8px;font-family:arial,helvetic=
+a,sans-serif"></span><div><br><br></div></div></div><br><div class=3D"gmail=
+_quote"><div dir=3D"ltr" class=3D"gmail_attr">On Wed, 17 Jul 2024 at 03:04,=
+ Tutor Support Lct &lt;<a href=3D"mailto:tutorlct19@gmail.com" target=3D"_b=
+lank">tutorlct19@gmail.com</a>&gt; wrote:<br></div><blockquote class=3D"gma=
+il_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,2=
+04,204);padding-left:1ex"><div dir=3D"ltr">There isn&#39;t any time frame f=
+or the course.=C2=A0<div><br clear=3D"all"><div><div dir=3D"ltr" class=3D"g=
+mail_signature"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=
+=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div><div dir=3D"ltr"><div dir=
+=3D"ltr"><div dir=3D"ltr"><div><font face=3D"trebuchet ms, sans-serif" size=
+=3D"1"><b>Tutor Support/LMS</b></font></div><div style=3D"font-family:Robot=
+o,RobotoDraft,Helvetica,Arial,sans-serif"><div dir=3D"ltr"><font size=3D"1"=
+><img width=3D"96" height=3D"96" src=3D"https://ci3.googleusercontent.com/m=
+ail-sig/AIorK4yUXdJqH8WNlkc0aRuRc6Ux0ltp8pFOH8rIfjfR8xpOjPqxhazU5psf4LobJHE=
+wrvBHrRtQQzM"><br></font></div></div></div></div></div></div><div style=3D"=
+font-family:Roboto,RobotoDraft,Helvetica,Arial,sans-serif"><b><font size=3D=
+"1">London College of Teachers and Trainers</font></b></div><div style=3D"f=
+ont-family:Roboto,RobotoDraft,Helvetica,Arial,sans-serif"><font size=3D"1">=
+UK toll free: +44 808 271 1535<span style=3D"color:rgb(50,50,50);font-famil=
+y:&quot;Open Sans&quot;,sans-serif;text-align:center"><br></span></font></d=
+iv><div><div style=3D"font-family:&quot;trebuchet ms&quot;,sans-serif"><fon=
+t size=3D"1"><span style=3D"font-family:Arial,Helvetica,sans-serif">Email:=
+=C2=A0</span><a href=3D"mailto:lctaccess19@gmail.com" style=3D"color:rgb(17=
+,85,204);font-family:Arial,Helvetica,sans-serif" target=3D"_blank">t</a><a =
+href=3D"mailto:utorlct19@gmail.com" target=3D"_blank">utorlct19@gmail.com</=
+a></font></div><div style=3D"font-family:&quot;trebuchet ms&quot;,sans-seri=
+f"><font size=3D"1" style=3D"color:rgb(17,85,204);font-family:Arial,Helveti=
+ca,sans-serif"><a href=3D"https://www.londoncollegeofteachers.com/index.php=
+" style=3D"color:rgb(17,85,204);font-family:Arial,Helvetica,sans-serif" tar=
+get=3D"_blank">www.londoncollegeofteachers.com</a></font></div><div><font f=
+ace=3D"trebuchet ms, sans-serif"><a href=3D"http://www.londoncollegeofteach=
+ers.uk/" target=3D"_blank">http://www.londoncollegeofteachers.uk/</a></font=
+><br></div><div><font face=3D"trebuchet ms, sans-serif"><a href=3D"http://w=
+ww.londoncollegeofteacher.com/" target=3D"_blank">http://www.londoncollegeo=
+fteacher.com/</a><br></font></div><div><a href=3D"https://www.londoncollege=
+ofteachers.com/index.php" target=3D"_blank">https://www.londoncollegeofteac=
+hers.com/index.php</a><br></div><div><br></div><div><br></div><div><br></di=
+v><div><font face=3D"trebuchet ms, sans-serif"><br></font></div><div style=
+=3D"font-family:&quot;trebuchet ms&quot;,sans-serif"><div style=3D"margin:0=
+px;padding:0px 0px 20px;width:864px;font-family:Roboto,RobotoDraft,Helvetic=
+a,Arial,sans-serif"><div style=3D"margin:8px 0px 0px;padding:0px"><div dir=
+=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div style=3D"margin:0px;padding=
+:0px 0px 20px;width:825.653px;font-family:Roboto,RobotoDraft,Helvetica,Aria=
+l,sans-serif"><div style=3D"margin:8px 0px 0px;padding:0px"><div dir=3D"ltr=
+"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div =
+dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"=
+ltr"><div style=3D"font-family:&quot;trebuchet ms&quot;,sans-serif"><font s=
+ize=3D"1"><img width=3D"96" height=3D"62" alt=3D"Chattered College of Teach=
+ing" src=3D"https://www.londoncollegeofteachers.com/assets/images/accre-col=
+lege-of-teachers.png" style=3D"font-family: Arial, Helvetica, sans-serif;">=
+</font></div><div style=3D"font-family:&quot;trebuchet ms&quot;,sans-serif"=
+><div></div><div><font size=3D"1"><img src=3D"https://www.crccasia.com/wp-c=
+ontent/uploads/2019/02/50746343_285420495432710_4468992821008793600_n.png" =
+alt=3D"Intern Reviews | International Internships | CRCC Asia" width=3D"96"=
+ height=3D"34">=C2=A0<img width=3D"96" height=3D"56" src=3D"https://ci3.goo=
+gleusercontent.com/mail-sig/AIorK4zOjNi2U9syqtr-703tn3iiSJADf2rR581VnZosy2u=
+ThOntqfQUK0qBgj2dfT-WSgdrQk8-Bdc"></font><br></div></div></div></div></div>=
+</div></div></div></div></div></div></div><div style=3D"font-size:medium"><=
+/div></div><div style=3D"font-size:medium"></div></div></div></div></div><d=
+iv style=3D"font-size:medium"></div></div><div style=3D"font-size:medium"><=
+/div></div></div></div></div></div></div></div></div></div></div></div><br>=
+</div></div><br><div class=3D"gmail_quote"><div dir=3D"ltr" class=3D"gmail_=
+attr">On Wed, Jul 17, 2024 at 9:01=E2=80=AFAM Martin Koo &lt;martin@martin-=
+is-awesome.win&gt; wrote:<br></div><blockquote class=3D"gmail_quote" style=
+=3D"margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding=
+-left:1ex"><div dir=3D"ltr"><div dir=3D"ltr">Sorry, what is &quot;the sched=
+ule discussed?&quot; The page I bought the course from says it is a self-pa=
+ced online course, with no mention of modules being time-gated.=C2=A0</div>=
+<br><div class=3D"gmail_quote"><div dir=3D"ltr" class=3D"gmail_attr">On Mon=
+, 15 Jul 2024 at 03:31, Tutor Support Lct &lt;<a href=3D"mailto:tutorlct19@=
+gmail.com" target=3D"_blank">tutorlct19@gmail.com</a>&gt; wrote:<br></div><=
+blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-l=
+eft:1px solid rgb(204,204,204);padding-left:1ex"><div dir=3D"ltr">Dear Mart=
+in,<div><br></div><div><span style=3D"font-size:12.8px">We welcome you to o=
+ur globally reputed and=C2=A0internationally=C2=A0accredited teacher=C2=A0t=
+raining=C2=A0institute. Our journey with our students starts once they sign=
+ up for any=C2=A0</span><span style=3D"color:rgb(60,64,67);background-color=
+:rgb(253,226,147);font-size:12.8px">course</span><span style=3D"font-size:1=
+2.8px">=C2=A0and it continues for a lifetime.</span><br style=3D"font-size:=
+12.8px"><br style=3D"font-size:12.8px"><span style=3D"font-size:12.8px">To =
+prepare our students, we have chosen a program with an active self-learning=
+ approach. This=C2=A0</span><span style=3D"color:rgb(60,64,67);background-c=
+olor:rgb(253,226,147);font-size:12.8px">course</span><span style=3D"font-si=
+ze:12.8px">=C2=A0promises to be full of learning opportunities.</span><br s=
+tyle=3D"font-size:12.8px"><br style=3D"font-size:12.8px"><span style=3D"fon=
+t-size:12.8px">As your tutor, I am looking forward to being part of your ac=
+ademic progress.</span><br style=3D"font-size:12.8px"><br style=3D"font-siz=
+e:12.8px"><span style=3D"font-size:12.8px">=E2=9C=92=C2=A0Before proceeding=
+, please go through the=C2=A0</span><span style=3D"color:rgb(60,64,67);back=
+ground-color:rgb(253,226,147);font-size:12.8px">Course</span><span style=3D=
+"font-size:12.8px">=C2=A0Rules and Procedure</span><br style=3D"font-size:1=
+2.8px"><ul style=3D"font-size:12.8px"><li style=3D"margin-left:15px">Kindly=
+ save your credentials.</li><li style=3D"margin-left:15px">Access to the fi=
+rst module has already been given.</li><li style=3D"margin-left:15px">After=
+ you go through the module you can make an appointment for a doubt-clearing=
+ session.</li><li style=3D"margin-left:15px">After submission your score wi=
+ll be reflected along with the correct answer key.</li><li style=3D"margin-=
+left:15px">40 % is the cut-off to move to the next module.</li><li style=3D=
+"margin-left:15px">The access would be given as per the schedule discussed.=
+</li><li style=3D"margin-left:15px">Please maintain your registered email a=
+ddress for any kind of communication or submission of your assignments.</li=
+><li style=3D"margin-left:15px">PLEASE MAINTAIN THE REGISTERED EMAIL ADDRES=
+S FOR SUBMITTING YOUR ASSIGNMENTS OTHERWISE IT WILL BE REJECTED.</li><li st=
+yle=3D"margin-left:15px"><b style=3D"font-family:arial,helvetica,sans-serif=
+"><u>Strictly maintain the=C2=A0course=C2=A0duration as mentioned. In case =
+of delay, additional charges will be levied.</u>=C2=A0</b></li></ul><div di=
+r=3D"auto" style=3D"font-size:12.8px">I hope to build a strong relationship=
+ as I work with you to ensure your success. Please feel free to contact me =
+for further queries.<br><br>Stay Safe and Healthy!</div><div dir=3D"auto" s=
+tyle=3D"font-size:12.8px"><br></div></div><div><br clear=3D"all"><div><div =
+dir=3D"ltr" class=3D"gmail_signature"><div dir=3D"ltr"><div dir=3D"ltr"><di=
+v dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div><div =
+dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div><font face=3D"trebuchet =
+ms, sans-serif" size=3D"1"><b>Tutor Support/LMS</b></font></div><div style=
+=3D"font-family:Roboto,RobotoDraft,Helvetica,Arial,sans-serif"><div dir=3D"=
+ltr"><font size=3D"1"><img width=3D"96" height=3D"96"><br></font></div></di=
+v></div></div></div></div><div style=3D"font-family:Roboto,RobotoDraft,Helv=
+etica,Arial,sans-serif"><b><font size=3D"1">London College of Teachers and =
+Trainers</font></b></div><div style=3D"font-family:Roboto,RobotoDraft,Helve=
+tica,Arial,sans-serif"><font size=3D"1">UK toll free: +44 808 271 1535<span=
+ style=3D"color:rgb(50,50,50);font-family:&quot;Open Sans&quot;,sans-serif;=
+text-align:center"><br></span></font></div><div><div style=3D"font-family:&=
+quot;trebuchet ms&quot;,sans-serif"><font size=3D"1"><span style=3D"font-fa=
+mily:Arial,Helvetica,sans-serif">Email:=C2=A0</span><a href=3D"mailto:lctac=
+cess19@gmail.com" style=3D"color:rgb(17,85,204);font-family:Arial,Helvetica=
+,sans-serif" target=3D"_blank">t</a><a href=3D"mailto:utorlct19@gmail.com" =
+target=3D"_blank">utorlct19@gmail.com</a></font></div><div style=3D"font-fa=
+mily:&quot;trebuchet ms&quot;,sans-serif"><font size=3D"1" style=3D"color:r=
+gb(17,85,204);font-family:Arial,Helvetica,sans-serif"><a href=3D"https://ww=
+w.londoncollegeofteachers.com/index.php" style=3D"color:rgb(17,85,204);font=
+-family:Arial,Helvetica,sans-serif" target=3D"_blank">www.londoncollegeofte=
+achers.com</a></font></div><div><font face=3D"trebuchet ms, sans-serif"><a =
+href=3D"http://www.londoncollegeofteachers.uk/" target=3D"_blank">http://ww=
+w.londoncollegeofteachers.uk/</a></font><br></div><div><font face=3D"trebuc=
+het ms, sans-serif"><a href=3D"http://www.londoncollegeofteacher.com/" targ=
+et=3D"_blank">http://www.londoncollegeofteacher.com/</a><br></font></div><d=
+iv><a href=3D"https://www.londoncollegeofteachers.com/index.php" target=3D"=
+_blank">https://www.londoncollegeofteachers.com/index.php</a><br></div><div=
+><br></div><div><br></div><div><br></div><div><font face=3D"trebuchet ms, s=
+ans-serif"><br></font></div><div style=3D"font-family:&quot;trebuchet ms&qu=
+ot;,sans-serif"><div style=3D"margin:0px;padding:0px 0px 20px;width:864px;f=
+ont-family:Roboto,RobotoDraft,Helvetica,Arial,sans-serif"><div style=3D"mar=
+gin:8px 0px 0px;padding:0px"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"=
+ltr"><div style=3D"margin:0px;padding:0px 0px 20px;width:825.653px;font-fam=
+ily:Roboto,RobotoDraft,Helvetica,Arial,sans-serif"><div style=3D"margin:8px=
+ 0px 0px;padding:0px"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><d=
+iv dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=
+=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div style=3D"font-family:&quot;=
+trebuchet ms&quot;,sans-serif"><font size=3D"1"><img width=3D"96" height=3D=
+"62" alt=3D"Chattered College of Teaching" style=3D"font-family: Arial, Hel=
+vetica, sans-serif;"></font></div><div style=3D"font-family:&quot;trebuchet=
+ ms&quot;,sans-serif"><div></div><div><font size=3D"1"><img alt=3D"Intern R=
+eviews | International Internships | CRCC Asia" width=3D"96" height=3D"34">=
+=C2=A0<img width=3D"96" height=3D"56"></font><br></div></div></div></div></=
+div></div></div></div></div></div></div></div><div style=3D"font-size:mediu=
+m"></div></div><div style=3D"font-size:medium"></div></div></div></div></di=
+v><div style=3D"font-size:medium"></div></div><div style=3D"font-size:mediu=
+m"></div></div></div></div></div></div></div></div></div></div></div></div>=
+</div></div>
+</blockquote></div></div>
+</blockquote></div>
+</blockquote></div>
+</blockquote></div>
+
+--000000000000dfbed0061d80503c--
+

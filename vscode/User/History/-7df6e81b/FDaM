@@ -1,0 +1,17 @@
+#!/usr/bin/zsh
+
+START=$PWD
+cd $HOME
+
+# clone dotfiles
+if [ ! -e $HOME/dotfiles ]; then
+    git clone git@github.com:mkoo21/dotfiles.git
+fi
+
+# install package list
+pacman -S - < $HOME/dotfiles/maintenance/packlist.txt
+ln -s $HOME/dotfiles/.zshrc $HOME/.zshrc
+
+
+
+cd $START

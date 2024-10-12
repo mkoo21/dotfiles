@@ -1,0 +1,14 @@
+#!/usr/bin/zsh
+
+START=$PWD
+cd $HOME
+
+if [ ! -e $HOME/dotfiles ]; then
+    
+fi
+
+ln -s $HOME/dotfiles/.zshrc $HOME/.zshrc
+
+
+
+cd 

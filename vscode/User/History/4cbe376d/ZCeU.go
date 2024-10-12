@@ -1,0 +1,87 @@
+package main // change this later; this is only main for now out of expedience
+
+import (
+	"errors"
+	"fmt"
+	"log"
+	"os"
+	"os/exec"
+	"regexp"
+	// "path/filepath"
+)
+
+func checkArgs() error {
+	// Basic args check
+	if len(os.Args) != 3 {
+		re := regexp.MustCompile(`\/([^\/]*)$`)
+		ownname := re.FindStringSubmatch(os.Args[0])[1]
+		log.Fatal(fmt.Sprintf("Usage: %s <input-path> <output-path>\n", ownname))
+		os.Exit(1)
+	}
+	return
+}
+
+func checkPaths() (string, error) {
+	inputPath := os.Args[1]
+	outputPath := os.Args[2]
+	encryptPath := inputPath
+
+	inputInfo, err := os.Stat(inputPath)
+	if os.IsNotExist(err) {
+		return "", errors.New(fmt.Sprintf("Input path %s does not exist", inputPath))
+	}
+
+	outputInfo, err := os.Stat(outputPath)
+	fmt.Println(outputInfo)
+	// if os.IsExist() {
+
+	// }
+	if inputInfo.IsDir() {
+		// directory must be archived first
+		tarOutPath := fmt.Sprintf("%s.tar.gz", inputPath)
+		cmd := exec.Command("tar", "-czf", tarOutPath, inputPath)
+		err := cmd.Run()
+		if err != nil {
+			// log.Fatal(err)
+			// os.Exit(1)
+			return "", err
+		}
+		encryptPath = tarOutPath
+	}
+
+	return encryptPath, nil
+
+}
+
+func main() {
+	checkArgs()
+	// Get the path from the arguments
+	// path := os.Args[1]
+
+	// // Check if the path exists
+	// info, err := os.Stat(path)
+	// if os.IsNotExist(err) {
+	// 	fmt.Printf("Error: Path '%s' does not exist\n", path)
+	// 	os.Exit(1)
+	// } else if err != nil {
+	// 	fmt.Printf("Error checking path: %v\n", err)
+	// 	os.Exit(1)
+	// }
+
+	// // Determine if it's a file or directory
+	// if info.IsDir() {
+	// 	fmt.Printf("'%s' is a directory\n", path)
+	// } else {
+	// 	fmt.Printf("'%s' is a file\n", path)
+	// }
+
+	// // Now let's assume we want to run a system binary like 'gpg'
+	// // Example: run 'gpg --version' to check if it's installed and working
+	// cmd := exec.Command("gpg", "--version")
+	// output, err := cmd.CombinedOutput()
+	// if err != nil {
+	// 	log.Fatalf("Error running gpg: %v", err)
+	// }
+
+	// fmt.Printf("\n'gpg --version' output:\n%s\n", output)
+}

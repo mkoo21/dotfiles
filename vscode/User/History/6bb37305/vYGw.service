@@ -1,0 +1,10 @@
+[Unit]
+Description=Write list of packages to a file for backup/restoration
+
+[Service]
+Type=oneshot
+ExecStart=/home/martin/dotfiles/maintenance/scripts/backup-docker-volumes.sh
+
+[Install]
+WantedBy=multi-user.target
+
