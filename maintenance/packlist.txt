@@ -117,6 +117,7 @@ freerdp
 freetype2
 fribidi
 fuse-common
+fuse2
 fuse3
 gawk
 gc
@@ -405,6 +406,7 @@ libmodplug
 libmpc
 libmpcdec
 libmpeg2
+libmspack
 libmtp
 libmysofa
 libnautilus-extension
@@ -722,6 +724,7 @@ qt5-translations
 qt5-x11extras
 raptor
 rav1e
+rclone
 readline
 rtkit
 rtmpdump
@@ -796,6 +799,7 @@ util-linux
 util-linux-libs
 v4l-utils
 vapoursynth
+veracrypt
 vi
 vid.stab
 visual-studio-code-bin
@@ -818,6 +822,8 @@ wireplumber
 woff2
 wpa_supplicant
 wsdd
+wxwidgets-common
+wxwidgets-gtk3
 x264
 x265
 xcb-proto
