@@ -1,0 +1,4 @@
+general.import = ["/home/martin/.config/alacritty/themes/citylights.yaml"]
+
+[window]
+opacity = 0.95
